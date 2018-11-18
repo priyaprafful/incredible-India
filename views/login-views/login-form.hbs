@@ -1,0 +1,42 @@
+<div>Sign Up</div>
+
+{{>flash_messages}}
+
+<form action="/process-signup" method="POST">
+<label>
+  UserName:
+  <input type="text" name="userName" placeholder="Your Name"/>
+</label>
+
+<label>
+  Email:
+  <input type="email" name="userEmail" placeholder="Create your email"/>
+</label>
+
+<label>
+  password:
+  <input type="password" name="userPassword" placeholder="Your Secret"/>
+</label>
+
+<button>Sign Up</button>
+
+</form>
+
+
+
+<div>Log In</div>
+
+
+<form action="/process-login" method="POST">
+<label>
+  Email:
+  <input type="email" name="userEmail" placeholder="pht@gg.co"/>
+</label>
+<label>
+  Password:
+ <input type="password" name="userPassword" placeholder="Your Secret"/>
+</label>
+
+<button>Log In</button>
+
+</form>

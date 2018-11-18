@@ -10,6 +10,11 @@ const logger       = require('morgan');
 const path         = require('path');
 
 
+const session = require("express-session");
+
+const flash  =require("connect-flash");
+
+
 mongoose
   .connect('mongodb://localhost/incredible-india', {useNewUrlParser: true})
   .then(x => {
@@ -38,13 +43,35 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
       
-
+hbs.registerPartials(path.join(__dirname,"views","partials"));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
+app.use(session({
+  //resave and saveUninitialize are just thats differnt for every app
+  resave:true,
+  saveUninitialized:true,
+  //"secret should be a string thats differnt for everu app"
+  secret:"eXUW6iJ6=2h}yBC36P^;MmJ+fpYiU8A[Mg2KNRAj?C",
+  //use the "connect-mongo" npm package to store session info in MONGODB
+ // store: new MongoStore({mongooseConnection:mongoose.connection}),
+}));
 
+
+//enables flash messages in our routes with "req.flash"
+app.use(flash());
+//app.use()define MIDDELWARE functions (they runs before ALL your routes)
+app.use((req,res,next)=>{
+  //send flash messagesto the hbs file as ""messages
+res.locals.messages=req.flash();
+//
+res.locals.currentUser = req.user;
+
+//you need this or your app womt work(page will load forever)
+next();
+});
 
 // default value for title local
 app.locals.title = 'Incredible-India';
@@ -58,8 +85,8 @@ app.use('/', index);
 const placeRouter = require('./routes/place-router.js');
 app.use('/', placeRouter);
 
-// const loginRouter = require("./routes/login-router.js");
-// app.use("/",loginRouter);
+ const loginRouter = require("./routes/login-router.js");
+ app.use("/", loginRouter);
 
 
 module.exports = app;
