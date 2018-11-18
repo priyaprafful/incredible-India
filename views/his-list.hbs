@@ -1,0 +1,12 @@
+<h2>historical places</h2>
+
+<div>
+  {{#each hisArray}}
+  <div>
+    <h3>{{this.name}}</h3>
+
+   <a href="/city/{{this.id}}"><img src={{this.images.[0]}} alt="historical-image"></a>
+
+</div>
+  {{/each}}
+</div>
