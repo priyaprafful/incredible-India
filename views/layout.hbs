@@ -5,25 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
   <header>
-    <h1>{{title}}</h1>
+  
+    
     <nav>
-      <a href="/">Home</a>
-      <a href="/historicalplaces">Historical places</a>
-      <a href="/mysteriousplaces">Mysterious Places</a>
+    {{!-- <div class="logo">
+      <a href="/">
+      <img src="../images/logo.png"/>
+      </a>
+   </div> --}}
+   <div class="dropdwn">
+   
+  <button class="dropbtn"></button>
+   <div class="hidden-menu">
+      
+     <li><a href="/historicalplaces">Historical places</a></li> 
+      <li><a href="/mysteriousplaces">Mysterious Places</a></li>
+      <li><a href="/trekkingplaces">Trekking Places</a></li>
+      <li><a href="/bestplaces">Best Places</a></li>
+      <li><a href="/culture">Culture</a></li>
+      <li><a href="/food">Food</a></li>
+
+   </div>
+   </div>
+<div class="show-menu">
       <a href="/login">Log In</a>
-    </nav>
+      <a href="/addStory">Add your story</a>
+      <a href="/planTrip">Plan your trip</a>
+
+       </div>
+  
+  </nav>
+   
+    
   </header>
+
+  
 
 
 
   {{{body}}}
 
-  <footer>Made by Priyanka and Harnit</footer>
+
+
+  <footer>
+    <p>Made by Priyanka and Harnit</p>
+    </footer>
 
   <script src="/javascripts/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

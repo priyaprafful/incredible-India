@@ -1,8 +1,53 @@
 body {
-  padding: 50px;
+  padding: 0px;
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
+
+header {
+  height: 50px; }
+
+nav {
+  position: fixed;
+  background-color: black;
+  top: 0;
+  width: 100%;
+  z-index: 99992;
+  padding: 10px 0;
+  border-bottom: 2px solid #b40701; }
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  float: right; }
+
+.hidden-menu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  float: right; }
+
+.hidden-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; }
+
+.dropdwn:hover .hidden-menu {
+  display: block; }
+
+.show-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */

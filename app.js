@@ -74,7 +74,7 @@ next();
 });
 
 // default value for title local
-app.locals.title = 'Incredible-India';
+app.locals.title = 'India-darshan';
 
 
 
@@ -82,11 +82,11 @@ const index = require('./routes/index');
 app.use('/', index);
 
 
-const placeRouter = require('./routes/place-router.js');
-app.use('/', placeRouter);
+// const placeRouter = require('./routes/place-router.js');
+// app.use('/', placeRouter);
 
- const loginRouter = require("./routes/login-router.js");
- app.use("/", loginRouter);
+//  const loginRouter = require("./routes/login-router.js");
+//  app.use("/", loginRouter);
 
 
 module.exports = app;

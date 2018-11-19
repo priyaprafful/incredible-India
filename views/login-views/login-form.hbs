@@ -1,8 +1,10 @@
-<div>Sign Up</div>
+{{!-- <div class="main-form">
+
+<div class="signup-heading">Sign Up</div>
 
 {{>flash_messages}}
 
-<form action="/process-signup" method="POST">
+<form id="form" action="/process-signup" method="POST">
 <label>
   UserName:
   <input type="text" name="userName" placeholder="Your Name"/>
@@ -24,10 +26,12 @@
 
 
 
-<div>Log In</div>
+<div class="login-heading">Log In</div>
+
+{{>flash_messages}}
 
 
-<form action="/process-login" method="POST">
+<form id="form" action="/process-login" method="POST">
 <label>
   Email:
   <input type="email" name="userEmail" placeholder="pht@gg.co"/>
@@ -40,3 +44,4 @@
 <button>Log In</button>
 
 </form>
+</div> --}}
