@@ -29,11 +29,17 @@ router.get("/historicalplaces", (req, res, next) => {
 });
 
 router.get("/food", (req, res, next) => {
-  Food.find({ category: { $eq: "Food" } })
-    .then(foodresults => {
-      // res.send(foodresults);
-      res.locals.foodArray = foodresults;
-      res.render("food-list.hbs");
+  Food.find({ category: { $eq: "Food" } }).then(foodresults => {
+    // res.send(foodresults);
+    res.locals.foodArray = foodresults;
+    res.render("food-list.hbs");
+  });
+});
+router.get("/historicalplaces", (req, res, next) => {
+  City.find({ placeCategory: { $eq: "Historical" } })
+    .then(historicalresults => {
+      res.locals.hisArray = historicalresults;
+      res.render("his-list.hbs");
     })
 
     .catch(err => next(err));
@@ -66,6 +72,7 @@ router.get("/trekkingplaces", (req, res, next) => {
     }
   );
 });
+module.exports = router;
 
 router.get("/city/:cityId", (req, res, next) => {
   const { cityId } = req.params;
