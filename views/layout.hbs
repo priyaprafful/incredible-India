@@ -18,10 +18,11 @@
       <img src="../images/logo.png"/>
       </a>
    </div> --}}
-   <div class="dropdwn">
+  
+  
    
-  <button class="dropbtn"></button>
-   <div class="hidden-menu">
+  
+   <div class="menu-list">
       
      <li><a href="/historicalplaces">Historical places</a></li> 
       <li><a href="/mysteriousplaces">Mysterious Places</a></li>
@@ -29,13 +30,19 @@
       <li><a href="/bestplaces">Best Places</a></li>
       <li><a href="/culture">Culture</a></li>
       <li><a href="/food">Food</a></li>
+       <li><a href="/addStory">Add your story</a></li>
+      <li><a href="/planTrip">Plan your trip</a></li>
 
-   </div>
-   </div>
-<div class="show-menu">
-      <a href="/login">Log In</a>
-      <a href="/addStory">Add your story</a>
-      <a href="/planTrip">Plan your trip</a>
+      {{#if currentUser}}
+      <b>{{currentUser.email}}</b>
+
+      
+      <li><a href="/logout">Log Out</a></li>
+{{else}}
+      <li> <a href="/login">Log In</a></li>
+{{/if}}
+
+
 
        </div>
   

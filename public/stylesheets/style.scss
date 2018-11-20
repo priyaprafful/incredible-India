@@ -2,6 +2,7 @@ body {
   padding: 0px;
   margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/background.png);
 }
 
 a {
@@ -22,53 +23,57 @@ nav{
   border-bottom: 2px solid #b40701;
   
 }
-.dropbtn  {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  float: right;
-}
 
-// .dropbtn li {
-//   background-color: #4CAF50;
-//   color: white;
-//   padding: 16px;
-//   font-size: 16px;
-//   border: none;
-//   float: right;
-// }
-
-
-// .dropdwn{
-//   display:inline-block;
-//   position:fixed;
-// }
-.hidden-menu{
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  float: right;
-
-}
-.hidden-menu a{
-
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdwn:hover .hidden-menu {display: block;}
-
-
-.show-menu{
+.menu-list{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 20px;
-  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.his-pattern{
+  display: flex;
+   flex-wrap: wrap; 
+  
+  /* width: 244%; */
+  max-width: 60%;
+  margin: 0 auto;
+ }
+.his-content{
+ 
+  width:33.33%;
+margin-top: 50px;
+}
+
+.his-content img{
+  width: 80%;
+  height: 50%;
+}
+.carousel-inner {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  left: 25%;
+  margin-top: 5%;
+}
+
+
+.carousel-control-prev {
+  left: 20%;
+}
+
+.carousel-control-next{
+  right: 20%;
+}
+
+

@@ -14,6 +14,13 @@ const session = require("express-session");
 
 const flash  =require("connect-flash");
 
+const MongoStore = require("connect-mongo")(session);
+
+const passport = require("passport");
+
+require("./config/passport-setup.js");
+
+
 
 mongoose
   .connect('mongodb://localhost/incredible-india', {useNewUrlParser: true})
@@ -56,8 +63,12 @@ app.use(session({
   //"secret should be a string thats differnt for everu app"
   secret:"eXUW6iJ6=2h}yBC36P^;MmJ+fpYiU8A[Mg2KNRAj?C",
   //use the "connect-mongo" npm package to store session info in MONGODB
- // store: new MongoStore({mongooseConnection:mongoose.connection}),
+  store: new MongoStore({mongooseConnection:mongoose.connection}),
 }));
+
+app.use(passport.initialize());
+
+app.use(passport.session());
 
 
 //enables flash messages in our routes with "req.flash"
@@ -82,11 +93,11 @@ const index = require('./routes/index');
 app.use('/', index);
 
 
-// const placeRouter = require('./routes/place-router.js');
-// app.use('/', placeRouter);
+const placeRouter = require('./routes/place-router.js');
+app.use('/', placeRouter);
 
-//  const loginRouter = require("./routes/login-router.js");
-//  app.use("/", loginRouter);
+  const loginRouter = require("./routes/login-router.js");
+  app.use("/", loginRouter);
 
 
 module.exports = app;

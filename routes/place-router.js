@@ -1,33 +1,33 @@
-// const express = require("express");
+const express = require("express");
 
-// const router = express.Router();
+const router = express.Router();
 
-// const City = require("../models/city-model.js");
+const City = require("../models/city-model.js");
 
-// router.get("/mysteriousplaces",(req,res,next)=>{
-//   City.find({placeCategory:{$eq:'Mysterious'}})
-//   //City.find()
-//   .then(mysteriousresults =>{
-//     //res.send(mysteriousresults)
-//     res.locals.mysArray =mysteriousresults;
-//     res.render("mys-list.hbs")
-//   })
+router.get("/mysteriousplaces",(req,res,next)=>{
+  City.find({placeCategory:{$eq:'Mysterious'}})
+  //City.find()
+  .then(mysteriousresults =>{
+    //res.send(mysteriousresults)
+    res.locals.mysArray =mysteriousresults;
+    res.render("mys-list.hbs")
+  })
 
-//   .catch(err=>next(err));
+  .catch(err=>next(err));
   
-// });
+});
 
 
-// router.get("/historicalplaces",(req,res,next)=>{
-//   City.find({placeCategory:{$eq:'Historical'}})
-//   .then(historicalresults =>{
-//     res.locals.hisArray =historicalresults;
-//     res.render("his-list.hbs")
-//   })
+router.get("/historicalplaces",(req,res,next)=>{
+  City.find({placeCategory:{$eq:'Historical'}})
+  .then(historicalresults =>{
+    res.locals.hisArray =historicalresults;
+    res.render("his-list.hbs")
+  })
 
-//   .catch(err=>next(err));
+  .catch(err=>next(err));
   
-// });
+});
 
 
 // router.get("/city/:cityId",(req,res,next)=>{
@@ -43,7 +43,7 @@
 // })
 
 
-// module.exports = router;
+ module.exports = router;
 
 //City.find().populate({path:"", match:{"placeCategory":"Mysterious"}})
   //City.fine().where('placeCategory').in(['Mysterious'])

@@ -1,23 +1,27 @@
-{{!-- <div class="main-form">
+<div class="main-form">
 
-<div class="signup-heading">Sign Up</div>
+<div class="signup-heading">Register</div>
 
 {{>flash_messages}}
 
 <form id="form" action="/process-signup" method="POST">
 <label>
-  UserName:
-  <input type="text" name="userName" placeholder="Your Name"/>
+  First Name:
+  <input type="text" name="firstName" placeholder="Your first Name"/>
+</label>
+<label>
+  Last Name:
+  <input type="text" name="lastName" placeholder="Your last Name"/>
 </label>
 
 <label>
   Email:
-  <input type="email" name="userEmail" placeholder="Create your email"/>
+  <input type="email" name="email" placeholder="Create your email"/>
 </label>
 
 <label>
-  password:
-  <input type="password" name="userPassword" placeholder="Your Secret"/>
+  Password:
+  <input type="password" name="password" placeholder="Your Secret"/>
 </label>
 
 <button>Sign Up</button>
@@ -26,7 +30,7 @@
 
 
 
-<div class="login-heading">Log In</div>
+<div class="login-heading">Welcome</div>
 
 {{>flash_messages}}
 
@@ -34,14 +38,14 @@
 <form id="form" action="/process-login" method="POST">
 <label>
   Email:
-  <input type="email" name="userEmail" placeholder="pht@gg.co"/>
+  <input type="email" name="email" placeholder="pht@gg.co"/>
 </label>
 <label>
   Password:
- <input type="password" name="userPassword" placeholder="Your Secret"/>
+ <input type="password" name="password" placeholder="Your Secret"/>
 </label>
 
 <button>Log In</button>
 
 </form>
-</div> --}}
+</div>
