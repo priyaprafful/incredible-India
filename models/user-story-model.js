@@ -19,9 +19,10 @@ email:{
 place:
   {type:String},
 
-images:
 
-[{type:String}],
+  avatar: {
+    type: String
+  },
 
 
 });

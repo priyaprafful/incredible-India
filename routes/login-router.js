@@ -7,6 +7,7 @@
  const emailValidator = require("email-validator");
 
  const User = require("../models/user-model.js");
+ //const moment = require('moment-timezone')
 
  router.get("/login",(req,res,next)=>{
   // res.send("login-views/login-form.hbs");
@@ -44,7 +45,13 @@ User.create({firstName,lastName,email,encryptedPassword})
 
 router.post("/process-login",(req,res,next)=>{
   const{email,password} = req.body;
+  // console.log("date is -----------------",new Date());
+  // const parisTime =new Date(moment.tz('2018-11-20 21:29:00', 'Europe/Amsterdam').format());
 
+  // console.log("date is -----------------",new Date());
+  // console.log("parisTime is -----------------",parisTime);
+  
+  
   User.findOne({email:{$eq:email}})
   .then(userDoc =>{
     if (!userDoc){

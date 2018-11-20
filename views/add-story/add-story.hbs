@@ -1,19 +1,32 @@
 
 <h2>Add Your Story</h2>
 
-<form action="/process-story" method="POST">
-<label for="">First Name
-  <input type="text" name="firstName" value= "{{currentUser.firstName}}">
-</label>
-<label for="">Last Name
-  <input type="text" name="lastName" value= "{{currentUser.lastName}}">
-</label>
-<label for="">Email
-  <input type="text" name="email" value= "{{currentUser.email}}">
-</label>
-<label for="">Place
-  <input type="text" name="place" value= "{{currentUser.email}}">
-</label>
+{{#if currentUser.avatar}}
+<img src="{{currentUser.avatar}}" alt="avatar">
+{{/if}}
+
+<form action="/process-story" method="POST" 
+enctype="multipart/form-data"
+>
+  <label>First Name
+    <input type="text" name="firstName" value= {{currentUser.firstName}}>
+  </label>
+  <label>Last Name
+    <input type="text" name="lastName" value= {{currentUser.lastName}}>
+  </label>
+  <label>Email
+    <input type="text" name="email" value= {{currentUser.email}}>
+  </label>
+  <label>Place
+    <input type="text" name="place" value= {{currentUser.email}}>
+  </label>
+
+<label>
+    Avatar
+    <input type="file" name="avatarUpload">  </label>
 <button>Submit</button>
 
 </form>
+
+<textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>
