@@ -1,27 +1,24 @@
-
 <h2>historical places</h2>
 
 
-  <div class="his-pattern">
+<div class="his-pattern">
   {{#each hisArray}}
   <div class="his-content">
-  
-   <a href="/city/{{this.id}}"><img src={{this.images.[0]}} alt="historical-image"></a>
-  
-  
-  
-  
+
+    <a href="/historicalplaces/{{this.id}}"><img src={{this.images.[0]}} alt="historical-image"></a>
+
+
+
+
     <h3>{{this.placeName}}</h3>
- 
- 
-  
-  
+
+
+
+
     <h3>{{this.cityName}}</h3>
-    </div>
+  </div>
 
 
 
   {{/each}}
-  </div>
-
-
+</div>
