@@ -11,19 +11,13 @@ const path = require("path");
 
 const session = require("express-session");
 
-<<<<<<< HEAD
 const flash = require("connect-flash");
-=======
-const flash  =require("connect-flash");
 
 const MongoStore = require("connect-mongo")(session);
 
 const passport = require("passport");
 
 require("./config/passport-setup.js");
-
-
->>>>>>> d7a4c134f2252091f8c9465b5989c80ac8d0362f
 
 mongoose
   .connect(
@@ -54,7 +48,6 @@ app.use(cookieParser());
 
 // Express View engine setup
 
-<<<<<<< HEAD
 app.use(
   require("node-sass-middleware")({
     src: path.join(__dirname, "public"),
@@ -75,39 +68,15 @@ app.use(
     resave: true,
     saveUninitialized: true,
     //"secret should be a string thats differnt for everu app"
-    secret: "eXUW6iJ6=2h}yBC36P^;MmJ+fpYiU8A[Mg2KNRAj?C"
+    secret: "eXUW6iJ6=2h}yBC36P^;MmJ+fpYiU8A[Mg2KNRAj?C",
     //use the "connect-mongo" npm package to store session info in MONGODB
-    // store: new MongoStore({mongooseConnection:mongoose.connection}),
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
-=======
-app.use(require('node-sass-middleware')({
-  src:  path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  sourceMap: true
-}));
-      
-hbs.registerPartials(path.join(__dirname,"views","partials"));
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
-app.use(session({
-  //resave and saveUninitialize are just thats differnt for every app
-  resave:true,
-  saveUninitialized:true,
-  //"secret should be a string thats differnt for everu app"
-  secret:"eXUW6iJ6=2h}yBC36P^;MmJ+fpYiU8A[Mg2KNRAj?C",
-  //use the "connect-mongo" npm package to store session info in MONGODB
-  store: new MongoStore({mongooseConnection:mongoose.connection}),
-}));
 
 app.use(passport.initialize());
 
 app.use(passport.session());
-
->>>>>>> d7a4c134f2252091f8c9465b5989c80ac8d0362f
 
 //enables flash messages in our routes with "req.flash"
 app.use(flash());
@@ -128,20 +97,10 @@ app.locals.title = "India-darshan";
 const index = require("./routes/index");
 app.use("/", index);
 
-<<<<<<< HEAD
 const placeRouter = require("./routes/place-router.js");
 app.use("/", placeRouter);
-=======
 
-const index = require('./routes/index');
-app.use('/', index);
-
-
-const placeRouter = require('./routes/place-router.js');
-app.use('/', placeRouter);
->>>>>>> d7a4c134f2252091f8c9465b5989c80ac8d0362f
-
-  const loginRouter = require("./routes/login-router.js");
-  app.use("/", loginRouter);
+const loginRouter = require("./routes/login-router.js");
+app.use("/", loginRouter);
 
 module.exports = app;

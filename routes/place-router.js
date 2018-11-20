@@ -65,7 +65,7 @@ router.get("/bestplaces", (req, res, next) => {
 });
 
 router.get("/trekkingplaces", (req, res, next) => {
-  City.find({ placeCategory: { $eq: "TrekkingPlaces" } }).then(
+  City.find({ placeCategory: { $eq: "Trekking" } }).then(
     trekkingplaceResults => {
       res.locals.trekkingplacesArray = trekkingplaceResults;
       res.render("trekkingplace-list.hbs");
@@ -74,14 +74,26 @@ router.get("/trekkingplaces", (req, res, next) => {
 });
 module.exports = router;
 
-router.get("/city/:cityId", (req, res, next) => {
-  const { cityId } = req.params;
+router.get("/mysteriousplaces/:mysteriousplacesId", (req, res, next) => {
+  const { mysteriousplacesId } = req.params;
 
-  City.findById(cityId)
-    .then(cityDoc => {
+  City.findById(mysteriousplacesId)
+    .then(mysteriouscityDoc => {
       //res.send(cityDoc)
-      res.locals.myCity = cityDoc;
-      res.render("place-detail.hbs");
+      res.locals.mymysteriousplaces = mysteriouscityDoc;
+      res.render("mysteriousplaces-detail.hbs");
+    })
+    .catch(err => next(err));
+});
+
+router.get("/historicalplaces/:historicalplacesId", (req, res, next) => {
+  const { historicalplacesId } = req.params;
+
+  City.findById(historicalplacesId)
+    .then(historicalplacesDoc => {
+      //res.send(cityDoc)
+      res.locals.myhistoricalplaces = historicalplacesDoc;
+      res.render("historicalplaces-detail.hbs");
     })
     .catch(err => next(err));
 });
@@ -98,7 +110,7 @@ router.get("/bestplaces/:bestplacesId", (req, res, next) => {
     .catch(err => next(err));
 });
 
-router.get("/trekkingplaces/:bestplacesId", (req, res, next) => {
+router.get("/trekkingplaces/:trekkingplacesId", (req, res, next) => {
   const { bestplacesId } = req.params;
 
   City.findById(bestplacesId)
@@ -106,6 +118,27 @@ router.get("/trekkingplaces/:bestplacesId", (req, res, next) => {
       //res.send(cityDoc)
       res.locals.mytrekkingPlace = trekkingPlaceDoc;
       res.render("trekkingplace-detail.hbs");
+    })
+    .catch(err => next(err));
+});
+
+router.get("/food/:foodId", (req, res, next) => {
+  const { foodId } = req.params;
+
+  Food.findById(foodId)
+    .then(foodDoc => {
+      res.locals.myFoods = foodDoc;
+      res.render("food-detail.hbs");
+    })
+    .catch(err => next(err));
+});
+
+router.get("/culture/:cultureId", (req, res, next) => {
+  const { cultureId } = req.params;
+  Culture.findById(cultureId)
+    .then(cultureDoc => {
+      res.locals.myculture = cultureDoc;
+      res.render("culture-detail.hbs");
     })
     .catch(err => next(err));
 });
