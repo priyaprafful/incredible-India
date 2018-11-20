@@ -1,0 +1,12 @@
+<h2>FOOD</h2>
+
+<div>
+    {{#each foodArray}}
+    <div>
+        <h3>{{this.foodName}}</h3>
+
+        <a href="/food/{{this.id}}"><img src={{this.images.[0]}} alt="food-image"></a>
+
+    </div>
+    {{/each}}
+</div>

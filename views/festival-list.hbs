@@ -1,0 +1,12 @@
+<h2>FESTIVALS</h2>
+
+<div>
+    {{#each cultureArray}}
+    <div>
+        <h3>{{this.festivalName}}</h3>
+
+        <a href="/city/{{this.id}}"><img src={{this.images.[0]}} alt="food-image"></a>
+
+    </div>
+    {{/each}}
+</div>

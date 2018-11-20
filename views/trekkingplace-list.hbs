@@ -1,0 +1,11 @@
+<h2>Trekking Places</h2>
+<div>
+    {{#each trekkingplacesArray}}
+    <div>
+        <h3>{{this.name}}</h3>
+
+        <a href="/trekkingplaces/{{this.id}}"><img src={{this.images.[0]}} alt="trekkingplaces-image"></a>
+
+    </div>
+    {{/each}}
+</div>
