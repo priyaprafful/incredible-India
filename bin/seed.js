@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Culture = require("../models/culture-model");
+const Food = require("../models/food-model");
 
 mongoose
   .connect(
@@ -306,159 +306,159 @@ mongoose
 
 // ];
 
-const cultureData = [
-  {
-    festivalName: "Diwali",
-    Mounth: "November",
-    description:
-      "Millions of Hindus around the world celebrate Diwali with gift exchanges, fireworks and festive meals. The Diwali celebration in India takes place when the monsoon season ends and the weather is mild and pleasant. People try to pay off their old debts, make or buy new clothes and thoroughly clean their houses as part of the festival preparations. House exteriors are whitewashed and sometimes decorated with designs drawn in white rice flour and filled in with color. Buildings are traditionally illuminated with oil-burning bowls called dipa lights, or more recently, with strings of artificial lights. People spend time with their friends and family.",
-    category: "Culture",
-    images: [
-      "https://dama.bg/uploaded/posts/dbd914804353a3572c4c5a61dc655d65.jpg?v=1",
-      "https://images.indianexpress.com/2017/06/29-vs-dipawali-celebration-759.jpg",
-      "http://temesira.org/wp-content/uploads/2017/07/Happy-Diwali-2016.png"
-    ]
-  },
-
-  {
-    festivalName: "Holi",
-    Mounth: "March",
-    description:
-      "Holi also celebrates the victory of good over evil, as well as the abundance of the spring harvest season. It's commonly referred to as the 'Festival of Colors'. People exuberantly throw colored powder and water all over each other, have parties, and dance under water sprinklers. Bhang (a paste made from cannabis plants) is also traditionally consumed during the celebrations. Holi is a very carefree festival that's great fun to participate in if you don’t mind getting wet and dirty.",
-    category: "Culture",
-    images: [
-      "https://visittrivalley.com/wp-content/uploads/2018/03/iStock-471366604.jpg",
-      "https://www.visitrenotahoe.com/wp-content/uploads/2017/07/HoliFestivalColor1.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Holi_shop.jpg/1200px-Holi_shop.jpg"
-    ]
-  },
-
-  {
-    festivalName: "Dussehra",
-    Mounth: "September",
-    description:
-      "Dussehra, also referred to as Vijayadashami, is also among the most famous festivals of India. It is celebrated in different forms countrywide. Ramlila (enactment of scenes from Ramayana) is held everywhere for 10 days. It’s culminated with “Ravan Dahan” – the burning of huge effigies of Ravana, Meghnath, and Kumbhkaran which is a real spectacle to see.",
-    category: "Culture",
-    images: [
-      "https://d19gb5k9ejx8w0.cloudfront.net/uploads/2014/10/CoverPage-Dussehra-Ramlila.jpg",
-      "http://images.patrika.com/mediafiles/2016/09/12/l_mela-1473655295.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSj6qve2pQUoyjAtqTbQcfal0CI1NB8VHOe2W3xNs04JEFr5yaXghttp://blog.railyatri.in/wp-content/uploads/2015/10/blog_Mysore-dasara.png"
-    ]
-  },
-
-  {
-    festivalName: "Vaisakhi",
-    Mounth: "April",
-    description:
-      "Baisakhi is primarily a festival celebrated by the Sikh community of Punjab and those around the world. It celebrates the welcoming of the harvest season for the rabi crops. The Sikhs celebrate this festival with a lot of excitement and enthusiasm by performing local folk dances such as Giddha and Bhangra. The festival is of great religious significance in India as it marks the day when the tenth Guru of Sikhs, Guru Gobind Singh, laid out the foundation stone for the Panth Khalsa-the Order back in 1699.",
-    category: "Culture",
-    images: [
-      "https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2017/12/cover2.jpg",
-      "http://www.thetravelboss.com//userfiles/image/images/festivities/Baisakhi-Festival-3.jpg",
-      "http://www.4to40.com/wp-content/uploads/2016/01/Young-girls-wear-traditional-Punjabi-dress-as-they-perform-the-giddha-during-celebrations-on-the-eve-of-the-Lohri-festival-in-Amritsar.jpg"
-    ]
-  },
-
-  {
-    festivalName: "Ganesh Chaturthi",
-    Mounth: "September",
-    description:
-      "The spectacular Ganesh Chaturthi festival honors the birth of the beloved Hindu elephant-headed god, Lord Ganesha. The start of the festival sees huge, elaborately crafted statutes of Ganesha installed in homes and public podiums, which have been especially constructed and beautifully decorated. At the end of the festival, the statutes are paraded through the streets, accompanied by much singing and dancing, and then submerged in the ocean. The best place to experience it is in Mumbai.",
-    category: "Culture",
-    images: [
-      "https://i.dailymail.co.uk/i/pix/2010/09/22/article-1314347-0B4E98AA000005DC-515_972x488.jpg",
-      "http://www.blogiism.com/wp-content/uploads/2017/08/ganesh-Chaturthi-gujarat.jpg",
-      "https://s3.amazonaws.com/medias.photodeck.com/493e5156-f46b-43fc-a993-1f90b7772817/Brett-Cole-India-02391_medium.jpg"
-    ]
-  }
-];
-
-// const foodData = [
+// const cultureData = [
 //   {
-//     foodName: "Paneer Tikka Masala",
-
-//     type: "North Indian",
-
+//     festivalName: "Diwali",
+//     Mounth: "November",
 //     description:
-//       "Chunks of marinated grilled paneer and capsicum in a creamy onion tomato masala a paneer tikka masala is one of the vegetarian Indian recipes that have found favour abroad. Soft grilled paneer and the flavours of the masala, blend together beautifully to give you a final dish which is a treat to all your senses. The process of making it from scratch can be lengthy but worth the effort.",
-
-//     category: "Food",
-
+//       "Millions of Hindus around the world celebrate Diwali with gift exchanges, fireworks and festive meals. The Diwali celebration in India takes place when the monsoon season ends and the weather is mild and pleasant. People try to pay off their old debts, make or buy new clothes and thoroughly clean their houses as part of the festival preparations. House exteriors are whitewashed and sometimes decorated with designs drawn in white rice flour and filled in with color. Buildings are traditionally illuminated with oil-burning bowls called dipa lights, or more recently, with strings of artificial lights. People spend time with their friends and family.",
+//     category: "Culture",
 //     images: [
-//       "http://www.cooktube.in/wp-content/uploads/2016/10/paneer-tikka-masala.jpg",
-//       "http://www.ektaindianrestaurant.com/fishtown/br/wp-content/uploads/sites/5/2017/02/paneer-tikka-masala-recipe-2.jpg",
-//       "https://www.cookwithkushi.com/wp-content/uploads/2016/02/IMG_8317_-1.jpg"
+//       "https://dama.bg/uploaded/posts/dbd914804353a3572c4c5a61dc655d65.jpg?v=1",
+//       "https://images.indianexpress.com/2017/06/29-vs-dipawali-celebration-759.jpg",
+//       "http://temesira.org/wp-content/uploads/2017/07/Happy-Diwali-2016.png"
 //     ]
 //   },
+
 //   {
-//     foodName: "Butter Naan",
-
-//     type: "North Indian",
-
+//     festivalName: "Holi",
+//     Mounth: "March",
 //     description:
-//       "Naan is a leavened, oven-baked flatbread that’s normally served with all meals. Typically, it will be served hot and brushed with ghee or butter. In non-traditional circles, different varieties of naan are available, like garlic naan or cheese naan. However you eat it, naan acts as almost a spoon to soup up sauce or dipped into chutneys. An Indian meal isn’t complete without naan at its side.",
-
-//     category: "Food",
-
+//       "Holi also celebrates the victory of good over evil, as well as the abundance of the spring harvest season. It's commonly referred to as the 'Festival of Colors'. People exuberantly throw colored powder and water all over each other, have parties, and dance under water sprinklers. Bhang (a paste made from cannabis plants) is also traditionally consumed during the celebrations. Holi is a very carefree festival that's great fun to participate in if you don’t mind getting wet and dirty.",
+//     category: "Culture",
 //     images: [
-//       "http://grabbite.com/wp-content/uploads/2014/03/naan2.jpg",
-//       "http://www.2spiceguru.com.au/wp-content/uploads/2015/04/butter-naan.jpg",
-//       "http://i.imgur.com/32qBM3D.jpg"
+//       "https://visittrivalley.com/wp-content/uploads/2018/03/iStock-471366604.jpg",
+//       "https://www.visitrenotahoe.com/wp-content/uploads/2017/07/HoliFestivalColor1.jpg",
+//       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Holi_shop.jpg/1200px-Holi_shop.jpg"
 //     ]
 //   },
+
 //   {
-//     foodName: "Samosas",
-
-//     type: "North Indian",
-
+//     festivalName: "Dussehra",
+//     Mounth: "September",
 //     description:
-//       "Samosas are a fried or baked pastry with savoury filling, such as spiced potatoes, onions, peas, lentils and sometimes ground lamb, ground beef or ground chicken. They were introduced to India during the Muslim Delhi Sultanate when cooks from the Middle East and Central Asia migrated to work in the kitchens of the Sultan and the nobility. Indian samosas are usually vegetarian, and often accompanied by a mint sauce or chutney. Samosas are a common street food and many tourists or Indians eat them as a midday snack.",
-
-//     category: "Food",
-
+//       "Dussehra, also referred to as Vijayadashami, is also among the most famous festivals of India. It is celebrated in different forms countrywide. Ramlila (enactment of scenes from Ramayana) is held everywhere for 10 days. It’s culminated with “Ravan Dahan” – the burning of huge effigies of Ravana, Meghnath, and Kumbhkaran which is a real spectacle to see.",
+//     category: "Culture",
 //     images: [
-//       "http://www.udipi-restaurant.com/wp-content/uploads/2014/05/samosa-900x600.jpg",
-//       "https://us.123rf.com/450wm/mnsanthoshkumar/mnsanthoshkumar1203/mnsanthoshkumar120300071/12922427-popular-indian-asian-and-african-deep-fried-snack-called-samosa-with-spicy-chutney-and-mint.jpg?ver=6",
-//       "http://cdn.recipes100.com/v/5f2a49e9adeb977a79ec1f88a8470cef.jpg"
+//       "https://d19gb5k9ejx8w0.cloudfront.net/uploads/2014/10/CoverPage-Dussehra-Ramlila.jpg",
+//       "http://images.patrika.com/mediafiles/2016/09/12/l_mela-1473655295.jpg",
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSj6qve2pQUoyjAtqTbQcfal0CI1NB8VHOe2W3xNs04JEFr5yaXghttp://blog.railyatri.in/wp-content/uploads/2015/10/blog_Mysore-dasara.png"
 //     ]
 //   },
+
 //   {
-//     foodName: "Masala Dosa",
-
-//     type: "South Indian",
-
+//     festivalName: "Vaisakhi",
+//     Mounth: "April",
 //     description:
-//       "A popular South Indian dish, dosa is a delicious comfort food that you can eat in any given course of food. It is light on the stomach, easy and quick to cook. Though its origin lies in Udupi, Karnataka, it is loved and savored all over the country and across the world as well. Dosa has had many variations over time but the most popular remains the plain dosa and masala dosa. You can have dosa for breakfast, brunch, lunch or even dinner since it is easily digestible, low on calories and extremely appetizing!",
-
-//     category: "Food",
-
+//       "Baisakhi is primarily a festival celebrated by the Sikh community of Punjab and those around the world. It celebrates the welcoming of the harvest season for the rabi crops. The Sikhs celebrate this festival with a lot of excitement and enthusiasm by performing local folk dances such as Giddha and Bhangra. The festival is of great religious significance in India as it marks the day when the tenth Guru of Sikhs, Guru Gobind Singh, laid out the foundation stone for the Panth Khalsa-the Order back in 1699.",
+//     category: "Culture",
 //     images: [
-//       "https://www.mozismenu.com/wp-content/uploads/2017/06/Chicken-Masala-Dosa-Chicken-Masala-Pancake-0.jpg",
-//       "https://www.currylounge.com.hk/wp-content/uploads/2017/03/paper-masala-dosa.jpg",
-//       "http://www.therustyrudder.net/wp-content/uploads/2017/07/new-york-street-food-indian-masa.jpg"
+//       "https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2017/12/cover2.jpg",
+//       "http://www.thetravelboss.com//userfiles/image/images/festivities/Baisakhi-Festival-3.jpg",
+//       "http://www.4to40.com/wp-content/uploads/2016/01/Young-girls-wear-traditional-Punjabi-dress-as-they-perform-the-giddha-during-celebrations-on-the-eve-of-the-Lohri-festival-in-Amritsar.jpg"
 //     ]
 //   },
+
 //   {
-//     foodName: "Uttapam",
-
-//     type: "South Indian",
-
+//     festivalName: "Ganesh Chaturthi",
+//     Mounth: "September",
 //     description:
-//       "A traditional delicacy from down South which literally means 'poured appam' in Tamil. Uttapam is a dosa-like preparation, that is light and easy on the stomach and can be served for breakfast, brunch or evening snacks. You can call it a soft, savoury pancake that is delicious, healthy and filling.",
-
-//     category: "Food",
-
+//       "The spectacular Ganesh Chaturthi festival honors the birth of the beloved Hindu elephant-headed god, Lord Ganesha. The start of the festival sees huge, elaborately crafted statutes of Ganesha installed in homes and public podiums, which have been especially constructed and beautifully decorated. At the end of the festival, the statutes are paraded through the streets, accompanied by much singing and dancing, and then submerged in the ocean. The best place to experience it is in Mumbai.",
+//     category: "Culture",
 //     images: [
-//       "http://www.cooktube.in/wp-content/uploads/2018/08/onion-tomato-uttapam.jpg",
-//       "https://i0.wp.com/media.hungryforever.com/wp-content/uploads/2016/11/30111121/oats-uthappam-recipe.jpeg?ssl=1?w=356&strip=all&quality=80",
-//       "http://spicyworld.in/recipeimages/bread-uttapam-b382d7f6-2228-41ca-9b24-c22ad5815a9d.jpg"
+//       "https://i.dailymail.co.uk/i/pix/2010/09/22/article-1314347-0B4E98AA000005DC-515_972x488.jpg",
+//       "http://www.blogiism.com/wp-content/uploads/2017/08/ganesh-Chaturthi-gujarat.jpg",
+//       "https://s3.amazonaws.com/medias.photodeck.com/493e5156-f46b-43fc-a993-1f90b7772817/Brett-Cole-India-02391_medium.jpg"
 //     ]
 //   }
 // ];
 
-Culture.create(cultureData)
-  .then(cultureResults => {
-    console.log(`Inserted ${cultureResults.length} Culture`);
+const foodData = [
+  {
+    foodName: "Paneer Tikka Masala",
+
+    type: "North Indian",
+
+    description:
+      "Chunks of marinated grilled paneer and capsicum in a creamy onion tomato masala a paneer tikka masala is one of the vegetarian Indian recipes that have found favour abroad. Soft grilled paneer and the flavours of the masala, blend together beautifully to give you a final dish which is a treat to all your senses. The process of making it from scratch can be lengthy but worth the effort.",
+
+    category: "Food",
+
+    images: [
+      "http://www.cooktube.in/wp-content/uploads/2016/10/paneer-tikka-masala.jpg",
+      "http://www.ektaindianrestaurant.com/fishtown/br/wp-content/uploads/sites/5/2017/02/paneer-tikka-masala-recipe-2.jpg",
+      "https://www.cookwithkushi.com/wp-content/uploads/2016/02/IMG_8317_-1.jpg"
+    ]
+  },
+  {
+    foodName: "Butter Naan",
+
+    type: "North Indian",
+
+    description:
+      "Naan is a leavened, oven-baked flatbread that’s normally served with all meals. Typically, it will be served hot and brushed with ghee or butter. In non-traditional circles, different varieties of naan are available, like garlic naan or cheese naan. However you eat it, naan acts as almost a spoon to soup up sauce or dipped into chutneys. An Indian meal isn’t complete without naan at its side.",
+
+    category: "Food",
+
+    images: [
+      "http://grabbite.com/wp-content/uploads/2014/03/naan2.jpg",
+      "http://www.2spiceguru.com.au/wp-content/uploads/2015/04/butter-naan.jpg",
+      "http://i.imgur.com/32qBM3D.jpg"
+    ]
+  },
+  {
+    foodName: "Samosas",
+
+    type: "North Indian",
+
+    description:
+      "Samosas are a fried or baked pastry with savoury filling, such as spiced potatoes, onions, peas, lentils and sometimes ground lamb, ground beef or ground chicken. They were introduced to India during the Muslim Delhi Sultanate when cooks from the Middle East and Central Asia migrated to work in the kitchens of the Sultan and the nobility. Indian samosas are usually vegetarian, and often accompanied by a mint sauce or chutney. Samosas are a common street food and many tourists or Indians eat them as a midday snack.",
+
+    category: "Food",
+
+    images: [
+      "http://www.udipi-restaurant.com/wp-content/uploads/2014/05/samosa-900x600.jpg",
+      "https://us.123rf.com/450wm/mnsanthoshkumar/mnsanthoshkumar1203/mnsanthoshkumar120300071/12922427-popular-indian-asian-and-african-deep-fried-snack-called-samosa-with-spicy-chutney-and-mint.jpg?ver=6",
+      "http://cdn.recipes100.com/v/5f2a49e9adeb977a79ec1f88a8470cef.jpg"
+    ]
+  },
+  {
+    foodName: "Masala Dosa",
+
+    type: "South Indian",
+
+    description:
+      "A popular South Indian dish, dosa is a delicious comfort food that you can eat in any given course of food. It is light on the stomach, easy and quick to cook. Though its origin lies in Udupi, Karnataka, it is loved and savored all over the country and across the world as well. Dosa has had many variations over time but the most popular remains the plain dosa and masala dosa. You can have dosa for breakfast, brunch, lunch or even dinner since it is easily digestible, low on calories and extremely appetizing!",
+
+    category: "Food",
+
+    images: [
+      "https://www.mozismenu.com/wp-content/uploads/2017/06/Chicken-Masala-Dosa-Chicken-Masala-Pancake-0.jpg",
+      "https://www.currylounge.com.hk/wp-content/uploads/2017/03/paper-masala-dosa.jpg",
+      "http://www.therustyrudder.net/wp-content/uploads/2017/07/new-york-street-food-indian-masa.jpg"
+    ]
+  },
+  {
+    foodName: "Uttapam",
+
+    type: "South Indian",
+
+    description:
+      "A traditional delicacy from down South which literally means 'poured appam' in Tamil. Uttapam is a dosa-like preparation, that is light and easy on the stomach and can be served for breakfast, brunch or evening snacks. You can call it a soft, savoury pancake that is delicious, healthy and filling.",
+
+    category: "Food",
+
+    images: [
+      "http://www.cooktube.in/wp-content/uploads/2018/08/onion-tomato-uttapam.jpg",
+      "https://i0.wp.com/media.hungryforever.com/wp-content/uploads/2016/11/30111121/oats-uthappam-recipe.jpeg?ssl=1?w=356&strip=all&quality=80",
+      "http://spicyworld.in/recipeimages/bread-uttapam-b382d7f6-2228-41ca-9b24-c22ad5815a9d.jpg"
+    ]
+  }
+];
+
+Food.create(foodData)
+  .then(foodResults => {
+    console.log(`Inserted ${foodResults.length} food`);
   })
   .catch(err => {
     console.log("inserted failure", err);

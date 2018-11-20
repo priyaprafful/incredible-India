@@ -14,9 +14,11 @@ router.get("/addStory",(req,res,next)=>{
     res.redirect("/login");
   }
   else{
-    res.render("add-story.hbs")
+    res.render("add-story/add-story.hbs")
   }
 })
+
+
 
 
 module.exports = router;

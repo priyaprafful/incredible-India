@@ -65,7 +65,7 @@ router.get("/bestplaces", (req, res, next) => {
 });
 
 router.get("/trekkingplaces", (req, res, next) => {
-  City.find({ placeCategory: { $eq: "TrekkingPlaces" } }).then(
+  City.find({ placeCategory: { $eq: "Trekking" } }).then(
     trekkingplaceResults => {
       res.locals.trekkingplacesArray = trekkingplaceResults;
       res.render("trekkingplace-list.hbs");
