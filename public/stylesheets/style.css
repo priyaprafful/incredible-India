@@ -1,11 +1,11 @@
 body {
   padding: 0px;
   margin: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-image: url(../images/background.png); }
 
 a {
-  color: #00B7FF; }
+  color: #00b7ff; }
 
 header {
   height: 50px; }

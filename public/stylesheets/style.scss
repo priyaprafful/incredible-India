@@ -1,19 +1,18 @@
 body {
   padding: 0px;
   margin: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-image: url(../images/background.png);
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
-
 
 header {
- height:50px;
+  height: 50px;
 }
-nav{
+nav {
   position: fixed;
   background-color: black;
   top: 0;
@@ -21,41 +20,26 @@ nav{
   z-index: 99992;
   padding: 10px 0;
   border-bottom: 2px solid #b40701;
-  
 }
 
-.menu-list{
+.menu-list {
   display: flex;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.his-pattern{
+.his-pattern {
   display: flex;
-   flex-wrap: wrap; 
-  
+  flex-wrap: wrap;
+
   /* width: 244%; */
   max-width: 60%;
   margin: 0 auto;
- }
-.his-content{
- 
-  width:33.33%;
-margin-top: 50px;
+}
+.his-content {
+  width: 33.33%;
+  margin-top: 50px;
 }
 
-.his-content img{
+.his-content img {
   width: 80%;
   height: 50%;
 }
@@ -67,13 +51,10 @@ margin-top: 50px;
   margin-top: 5%;
 }
 
-
 .carousel-control-prev {
   left: 20%;
 }
 
-.carousel-control-next{
+.carousel-control-next {
   right: 20%;
 }
-
-

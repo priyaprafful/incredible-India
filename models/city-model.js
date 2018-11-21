@@ -3,27 +3,24 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const citySchema = new Schema({
-placeName:
-  {type: String,
-  required:true},
+  placeName: { type: String, required: true },
 
-cityName:{type: String,},
+  cityName: { type: String },
 
-description:
-  {type:String},
+  description: { type: String },
 
-placeCategory:
-  {type:String},
+  placeCategory: { type: String },
 
-images:
+  images: [{ type: String }],
 
-[{type:String}],
-
-
+  reviews: [
+    {
+      firstName: { type: String, required: true },
+      comments: { type: String, required: true, maxlength: 200 }
+    }
+  ]
 });
 
-
-const City = mongoose.model("City",citySchema);
-
+const City = mongoose.model("City", citySchema);
 
 module.exports = City;

@@ -111,9 +111,9 @@ router.get("/bestplaces/:bestplacesId", (req, res, next) => {
 });
 
 router.get("/trekkingplaces/:trekkingplacesId", (req, res, next) => {
-  const { bestplacesId } = req.params;
+  const { trekkingplacesId } = req.params;
 
-  City.findById(bestplacesId)
+  City.findById(trekkingplacesId)
     .then(trekkingPlaceDoc => {
       //res.send(cityDoc)
       res.locals.mytrekkingPlace = trekkingPlaceDoc;
@@ -143,4 +143,38 @@ router.get("/culture/:cultureId", (req, res, next) => {
     .catch(err => next(err));
 });
 
+router.post(
+  "/trekkingplaces/:trekkingplacesId/process-review",
+  (req, res, next) => {
+    const { trekkingplacesId } = req.params;
+    const { firstName, comments } = req.body;
+    City.findByIdAndUpdate(
+      trekkingplacesId,
+      { $push: { reviews: { firstName, comments } } },
+      { runValidators: true }
+    )
+      .then(bookDoc => {
+        // res.locals.mytrekkingPlace = bookDoc;
+        // res.send(bookDoc);
+        res.redirect(`/trekkingplaces/${trekkingplacesId}`);
+      })
+      .catch(err => next(err));
+  }
+);
+
+router.post("/bestplaces/:bestplacesId/process-review", (req, res, next) => {
+  const { bestplacesId } = req.params;
+  const { firstName, comments } = req.body;
+  City.findByIdAndUpdate(
+    bestplacesId,
+    { $push: { reviews: { firstName, comments } } },
+    { runValidators: true }
+  )
+    .then(bookDoc => {
+      // res.locals.mytrekkingPlace = bookDoc;
+      // res.send(bookDoc);
+      res.redirect(`/bestplaces/${bestplacesId}`);
+    })
+    .catch(err => next(err));
+});
 module.exports = router;

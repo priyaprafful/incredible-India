@@ -21,7 +21,7 @@ require("./config/passport-setup.js");
 
 mongoose
   .connect(
-    "mongodb://localhost/incredible-india",
+    process.env.MONGODB_URI,
     { useNewUrlParser: true }
   )
   .then(x => {
