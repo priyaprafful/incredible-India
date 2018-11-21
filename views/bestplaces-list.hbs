@@ -1,12 +1,18 @@
 <h2>Best Places </h2>
 
-<div>
+<div class="row">
     {{#each bestPlacesArray}}
-    <div>
-        <h3>{{this.name}}</h3>
 
-        <a href="/bestplaces/{{this.id}}"><img src={{this.images.[0]}} alt="bestplaces-image"></a>
+    <div class="column">
+        <div class="content">
+            <h3>{{this.placeName}}</h3>
 
+            <a class="img-center" href="/bestplaces/{{this.id}}">
+                <img class="img-list" src={{this.images.[0]}} alt="bestplaces-image">
+            </a>
+
+        </div>
     </div>
+
     {{/each}}
 </div>

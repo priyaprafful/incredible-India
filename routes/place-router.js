@@ -171,9 +171,69 @@ router.post("/bestplaces/:bestplacesId/process-review", (req, res, next) => {
     { runValidators: true }
   )
     .then(bookDoc => {
-      // res.locals.mytrekkingPlace = bookDoc;
-      // res.send(bookDoc);
       res.redirect(`/bestplaces/${bestplacesId}`);
+    })
+    .catch(err => next(err));
+});
+
+router.post(
+  "/mysteriousplaces/:mysteriousplacesId/process-review",
+  (req, res, next) => {
+    const { mysteriousplacesId } = req.params;
+    const { firstName, comments } = req.body;
+    City.findByIdAndUpdate(
+      mysteriousplacesId,
+      { $push: { reviews: { firstName, comments } } },
+      { runValidators: true }
+    )
+      .then(bookDoc => {
+        res.redirect(`/mysteriousplaces/${mysteriousplacesId}`);
+      })
+      .catch(err => next(err));
+  }
+);
+
+router.post(
+  "/historicalplaces/:historicalplacesId/process-review",
+  (req, res, next) => {
+    const { historicalplacesId } = req.params;
+    const { firstName, comments } = req.body;
+    City.findByIdAndUpdate(
+      historicalplacesId,
+      { $push: { reviews: { firstName, comments } } },
+      { runValidators: true }
+    )
+      .then(bookDoc => {
+        res.redirect(`/historicalplaces/${historicalplacesId}`);
+      })
+      .catch(err => next(err));
+  }
+);
+
+router.post("/food/:foodId/process-review", (req, res, next) => {
+  const { foodId } = req.params;
+  const { firstName, comments } = req.body;
+  Food.findByIdAndUpdate(
+    foodId,
+    { $push: { reviews: { firstName, comments } } },
+    { runValidators: true }
+  )
+    .then(bookDoc => {
+      res.redirect(`/food/${foodId}`);
+    })
+    .catch(err => next(err));
+});
+
+router.post("/culture/:cultureId/process-review", (req, res, next) => {
+  const { cultureId } = req.params;
+  const { firstName, comments } = req.body;
+  Culture.findByIdAndUpdate(
+    cultureId,
+    { $push: { reviews: { firstName, comments } } },
+    { runValidators: true }
+  )
+    .then(bookDoc => {
+      res.redirect(`/culture/${cultureId}`);
     })
     .catch(err => next(err));
 });

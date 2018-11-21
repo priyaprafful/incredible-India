@@ -11,7 +11,14 @@ const foodSchema = new Schema({
 
   category: { type: String },
 
-  images: [{ type: String }]
+  images: [{ type: String }],
+
+  reviews: [
+    {
+      firstName: { type: String, required: true },
+      comments: { type: String, required: true, maxlength: 200 }
+    }
+  ]
 });
 
 const Food = mongoose.model("Food", foodSchema);

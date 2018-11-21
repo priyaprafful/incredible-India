@@ -5,3 +5,28 @@
 {{#each myculture.images}}
 <img src="{{this}}">
 {{/each}}
+
+<section class="places-reviews">
+    <form action="/culture/{{myculture._id}}/process-review" method="POST">
+        <label for="">
+            Your Name:
+            <input type="text" name="firstName" placeholder="Anton Ego">
+        </label>
+
+        <label for="">
+            Commments:
+            <input type="text" name="comments" placeholder="My favorite places!">
+        </label>
+
+        <button>Submit Review</button>
+    </form>
+
+    <ul>
+        {{#each myculture.reviews}}
+        <li>
+            <p><b>{{this.firstName}}</b>says:</p>
+            <p>{{this.comments}}</p>
+        </li>
+        {{/each}}
+    </ul>
+</section>

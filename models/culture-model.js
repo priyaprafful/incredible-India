@@ -11,7 +11,14 @@ const cultureSchema = new Schema({
 
   category: { type: String },
 
-  images: [{ type: String }]
+  images: [{ type: String }],
+
+  reviews: [
+    {
+      firstName: { type: String, required: true },
+      comments: { type: String, required: true, maxlength: 200 }
+    }
+  ]
 });
 
 const Culture = mongoose.model("Culture", cultureSchema);

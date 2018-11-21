@@ -1,5 +1,30 @@
-<h2>{{mymysteriousplaces.name}}</h2>
+<h2>{{mymysteriousplaces.placeName}}</h2>
 <p>{{mymysteriousplaces.description}}</p>
 {{#each mymysteriousplaces.images}}
 <img src="{{this}}">
 {{/each}}
+
+<section class="places-reviews">
+    <form action="/mysteriousplaces/{{mymysteriousplaces._id}}/process-review" method="POST">
+        <label for="">
+            Your Name:
+            <input type="text" name="firstName" placeholder="Anton Ego">
+        </label>
+
+        <label for="">
+            Commments:
+            <input type="text" name="comments" placeholder="My favorite places!">
+        </label>
+
+        <button>Submit Review</button>
+    </form>
+
+    <ul>
+        {{#each mymysteriousplaces.reviews}}
+        <li>
+            <p><b>{{this.firstName}}</b>says:</p>
+            <p>{{this.comments}}</p>
+        </li>
+        {{/each}}
+    </ul>
+</section>
