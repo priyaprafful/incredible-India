@@ -30,10 +30,10 @@ $(".login").on("click", function(e) {
   $("#login").show();
   $("#signup").hide();
 
-  $(".login").css("background-color", "black");
+  $(".login").css("background-color", "#1ab188");
   $(".loginlink").css("color", "white");
-  $(".signup").css("background-color", "white");
-  $(".signuplink").css("color", "black");
+  $(".signup").css("background-color", "rgba(160, 179, 176, 0.25)");
+  $(".signuplink").css("color", "#a0b3b0");
 });
 
 $(".signup").on("click", function(e) {
@@ -42,8 +42,8 @@ $(".signup").on("click", function(e) {
   $("#login").hide();
   $("#signup").show();
 
-  $(".login").css("background-color", "white");
-  $(".loginlink").css("color", "black");
-  $(".signup").css("background-color", "black");
+  $(".login").css("background-color", "rgba(160, 179, 176, 0.25)");
+  $(".loginlink").css("color", "#a0b3b0");
+  $(".signup").css("background-color", "#1ab188");
   $(".signuplink").css("color", "white");
 });
