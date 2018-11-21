@@ -1,12 +1,13 @@
 <h2>Best Places </h2>
 
-<div>
-    {{#each bestPlacesArray}}
-    <div>
-        <h3>{{this.name}}</h3>
-
-        <a href="/bestplaces/{{this.id}}"><img src={{this.images.[0]}} alt="bestplaces-image"></a>
-
-    </div>
+<div class="his-pattern">
+{{#each bestPlacesArray}}
+<div class="bp-content">
+     <a href="/bestplaces/{{this.id}}"><img src={{this.images.[0]}} alt="bestplaces-image"></a>
+      <h3>{{this.name}}</h3>
+ </div>
     {{/each}}
 </div>
+
+
+

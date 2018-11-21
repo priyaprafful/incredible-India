@@ -1,12 +1,12 @@
 <h2>FESTIVALS</h2>
 
-<div>
+<div class="his-pattern">
     {{#each cultureArray}}
-    <div>
-        <h3>{{this.festivalName}}</h3>
-
-        <a href="/culture/{{this.id}}"><img src={{this.images.[0]}} alt="food-image"></a>
-
-    </div>
+ <div class="fes-content">
+<a href="/culture/{{this.id}}"><img src={{this.images.[0]}} alt="food-image"></a>
+ <h3>{{this.festivalName}}</h3>
+ </div>
     {{/each}}
 </div>
+
+

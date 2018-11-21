@@ -1,14 +1,10 @@
 const express = require('express');
 const router  = express.Router();
 
-
-
 /* GET home page */
 router.get('/', (req, res, next) => {
   res.render('index');
 });
-
-
 
 router.get("/addStory",(req,res,next)=>{
   if(!req.user){
@@ -19,8 +15,6 @@ router.get("/addStory",(req,res,next)=>{
     res.render("add-story/add-story.hbs")
   }
 })
-
-
 
 
 module.exports = router;

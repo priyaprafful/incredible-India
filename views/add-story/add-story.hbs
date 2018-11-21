@@ -1,25 +1,41 @@
+<section class="sectionone">
+<div class="headerimg">
+</div>
+</section>
 
-<h2>Add Your Story</h2>
 
-{{#if currentUser.avatar}}
-<img src="{{currentUser.avatar}}" alt="avatar">
-{{/if}}
+
+<section class="sectiontwo">
+<div class="grid-images">
+  <div class="grid-each-image"></div>
+  <div class="grid-each-image"></div>
+  <div class="grid-each-image"></div>
+  <div class="grid-each-image"></div>
+
+
+</div>
+
+  <div class="formpart">
+
+    <h1> Fill the form below</h1>
 
 <form action="/process-story" method="POST" 
 enctype="multipart/form-data"
->
-  <label>First Name
-    <input type="text" name="firstName" value= {{currentUser.firstName}}>
+> 
+<label>Email
+    <input type="email" name="user" readonly="readonly" value={{currentUser.email}}>
   </label>
-  <label>Last Name
-    <input type="text" name="lastName" value= {{currentUser.lastName}}>
+<label>Title
+    <input type="text" name="title" placeholder="title">
   </label>
-  <label>Email
-    <input type="text" name="email" value= {{currentUser.email}}>
+   <textarea rows="4" cols="50" name="description" form="usrform">
+Enter text here...</textarea> 
+  
+    
+<label>Place
+    <input type="text" name="place" placeholder="place">
   </label>
-  <label>Place
-    <input type="text" name="place" value= {{currentUser.email}}>
-  </label>
+ 
 
 <label>
     Avatar
@@ -27,6 +43,7 @@ enctype="multipart/form-data"
 <button>Submit</button>
 
 </form>
+</div>
 
-<textarea rows="4" cols="50" name="comment" form="usrform">
-Enter text here...</textarea>
+</section>
+

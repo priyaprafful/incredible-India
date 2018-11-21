@@ -1,51 +1,97 @@
-<div class="main-form">
+<div class="form">
 
-<div class="signup-heading">Register</div>
+  <ul class="tab-group">
+        <li class="tab active signup"><a class="signuplink" href="#signup">Sign Up</a></li>
+        <li class="tab login"><a class="loginlink" href="#login">Log In</a></li>
+      </ul>
 
-{{>flash_messages}}
+      <div class="tab-content">
 
-<form id="form" action="/process-signup" method="POST">
-<label>
-  First Name:
+<div id="signup">
+
+  <h1>Register your account</h1>
+
+
+
+
+<form  action="/process-signup" method="POST">
+<div class="top-row">
+<div class="field-wrap">
+<label class="lab">
+  First Name<span class="req">*</span>
+  </label>
   <input type="text" name="firstName" placeholder="Your first Name"/>
-</label>
+</div>
+<div class="field-wrap">
 <label>
-  Last Name:
+  Last Name<span class="req">*</span>
+  </label>
   <input type="text" name="lastName" placeholder="Your last Name"/>
-</label>
+
+</div>
+</div>
+
+<div class="field-wrap">
 
 <label>
-  Email:
+  Email<span class="req">*</span>
+
+  </label>
   <input type="email" name="email" placeholder="Create your email"/>
-</label>
+
+
+</div>
+
+<div class="field-wrap">
 
 <label>
-  Password:
+   password<span class="req">*</span>
   <input type="password" name="password" placeholder="Your Secret"/>
 </label>
 
-<button>Sign Up</button>
-
-</form>
-
-
-
-<div class="login-heading">Welcome</div>
-
-{{>flash_messages}}
-
-
-<form id="form" action="/process-login" method="POST">
-<label>
-  Email:
-  <input type="email" name="email" placeholder="pht@gg.co"/>
-</label>
-<label>
-  Password:
- <input type="password" name="password" placeholder="Your Secret"/>
-</label>
-
-<button>Log In</button>
-
-</form>
 </div>
+
+<button type="submit" class="button button-block">Create Your Account</button>
+
+</form>
+
+</div>
+
+
+<div id="login">
+  <h1>Welcome back</h1>
+
+
+
+
+
+
+
+<form  action="/process-login" method="POST">
+<div class="field-wrap">
+<label>
+  Email Address<span class="req">*</span>
+  </label>
+  <input type="email" name="email" placeholder="pht@gg.co"/>
+ </div>
+ <div class="field-wrap">
+<label>
+  Password<span class="req">*</span>
+  </label>
+ <input type="password" name="password" placeholder="Your Secret"/>
+
+</div>
+
+<button class="button button-block">Log In</button>
+
+</form>
+
+</div>
+</div><!--tab content-->
+</div><!--/form-->
+
+
+
+
+
+{{!-- -------------------------------------------------------------- --}}

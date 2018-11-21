@@ -109,4 +109,6 @@ app.use("/", loginRouter);
   const storyRouter = require("./routes/story-router.js");
   app.use("/",storyRouter);
 
+  const myStoryRouter = require("./routes/mystory-router.js");
+  app.use("/",myStoryRouter);
 module.exports = app;

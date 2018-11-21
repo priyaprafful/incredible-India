@@ -1,11 +1,11 @@
 <h2>Trekking Places</h2>
-<div>
+<div class="his-pattern">
     {{#each trekkingplacesArray}}
-    <div>
-        <h3>{{this.name}}</h3>
-
-        <a href="/trekkingplaces/{{this.id}}"><img src={{this.images.[0]}} alt="trekkingplaces-image"></a>
-
-    </div>
+ <div class="trek-content">
+   <a href="/trekkingplaces/{{this.id}}"><img src={{this.images.[0]}} alt="trekkingplaces-image"></a>
+    <h3>{{this.name}}</h3>
+ </div>
     {{/each}}
 </div>
+
+
