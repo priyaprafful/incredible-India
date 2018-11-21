@@ -1,0 +1,29 @@
+<div class="main-form">
+
+<div class="signup-heading">Register</div>
+
+{{>flash_messages}}
+
+<form id="form" action="/process-signup" method="POST">
+<label>
+  First Name:
+  <input type="text" name="firstName" placeholder="Your first Name"/>
+</label>
+<label>
+  Last Name:
+  <input type="text" name="lastName" placeholder="Your last Name"/>
+</label>
+
+<label>
+  Email:
+  <input type="email" name="email" placeholder="Create your email"/>
+</label>
+
+<label>
+  Password:
+  <input type="password" name="password" placeholder="Your Secret"/>
+</label>
+
+<button>Sign Up</button>
+
+</form>

@@ -1,3 +1,12 @@
+
+<div>Travel stories</div>
 <div>
-  heyyyyyy
+  {{#each arrayOfStories}}
+    <div>
+      <h3>{{this.title}}</h3>
+      <h3>{{this.place}}</h3>
+      <h3>{{this.description}}</h3>
+    <img src={{this.avatar}}>
+    </div>
+  {{/each}}
 </div>

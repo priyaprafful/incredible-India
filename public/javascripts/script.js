@@ -8,36 +8,42 @@ document.addEventListener(
 
 console.log("hi");
 
-var postBtn = document.querySelector(".post-button");
-var commentList = document.querySelector("ol");
-var inputTag = document.querySelector("input");
-var deleteBtn = document.querySelector(".delete");
+// $('.tab a').on('click', function (e) {
 
-// postBtn.onclick = function() {
-//   console.log("coucou post comment");
-//   var newLi = document.createElement("li");
-//   newLi.innerHTML = inputTag.value + '<button class="delete">🗑</button>';
-//   commentList.appendChild(newLi);
-//   var newBtn = newLi.querySelector(".delete");
-//   newBtn.onclick = function() {
-//     console.log("coucou delete button");
-//     var isOkay = confirm("Are you sure you want to delete this comment?");
-//     if (isOkay) {
-//       var parentLi = newBtn.parentNode;
-//       parentLi.removeChild();
-//     }
-//   };
-//   inputTag.value = "";
-// };
+//   e.preventDefault();
+//   console.log( $(this));
 
-// deleteBtn.forEach(function(oneButton) {
-//   oneButton.onclick = function() {
-//     console.log("coucou delete button");
+//   $(this).parent().show();
+//   $(this).parent().siblings().hide();
 
-//     var isOkay = confirm("Are you sure you want to delete this comment?");
-//     if (isOkay) {
-//       var parentLi = oneButton.parentNode;
-//       parentLi.remove();
-//     }
-//   };
+//   target = $(this).attr('href');
+
+//   $('.tab-content > div').not(target).hide();
+
+//   $(target).fadeIn(600);
+
 // });
+
+$(".login").on("click", function(e) {
+  e.preventDefault();
+
+  $("#login").show();
+  $("#signup").hide();
+
+  $(".login").css("background-color", "black");
+  $(".loginlink").css("color", "white");
+  $(".signup").css("background-color", "white");
+  $(".signuplink").css("color", "black");
+});
+
+$(".signup").on("click", function(e) {
+  e.preventDefault();
+
+  $("#login").hide();
+  $("#signup").show();
+
+  $(".login").css("background-color", "white");
+  $(".loginlink").css("color", "black");
+  $(".signup").css("background-color", "black");
+  $(".signuplink").css("color", "white");
+});
