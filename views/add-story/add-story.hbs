@@ -1,50 +1,25 @@
-<section class="sectionone">
-{{!-- <div class="headerimg">
-</div> --}}
-<img src="../images/addstory-banner-1.jpg">
-</section>
 
-
-
+ 
 <section class="sectiontwo">
-<div class="grid-images">
-  <div class="grid-each-image"></div>
-  <div class="grid-each-image"></div>
-  <div class="grid-each-image"></div>
-  <div class="grid-each-image"></div>
-
-
+<div class="single-image">
+  <img src="../images/add-form-image.jpg">
 </div>
 
-  <div class="formpart">
-
-    <h1> Fill the form below</h1>
-
-<form action="/process-story" method="POST" 
+ <div class="addblog-form">
+ <form action="/process-story" method="POST" 
 enctype="multipart/form-data"
 > 
-<label>Email
-    <input type="email" name="user" readonly="readonly" value={{currentUser.email}}>
-  </label>
-<label>Title
-    <input type="text" name="title" placeholder="title">
-  </label>
-   <textarea rows="4" cols="50" name="description" form="usrform">
-Enter text here...</textarea> 
-  
-    
-<label>Place
-    <input type="text" name="place" placeholder="place">
-  </label>
- 
-
-<label>
-    Avatar
-    <input type="file" name="avatarUpload">  </label>
-<button>Submit</button>
-
-</form>
+<h1>Share your journey with us !!</h1>
+<input type="email" name="user" readonly="readonly" value={{currentUser.email}}>
+ <input type="text" name="title" placeholder="title of your story">
+ <input type="text" name="place" placeholder="place">
+  <input type="file" name="avatarUpload"> 
+ <textarea rows="4" cols="50" name="description" >
+  Share your story with...</textarea> 
+  <button>Submit</button>
+  </form>
 </div>
-
 </section>
+
+
 

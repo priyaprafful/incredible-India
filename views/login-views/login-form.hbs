@@ -6,6 +6,7 @@
   <div class="tab-content">
     <div id="signup">
       <h1>Register your account</h1>
+    
       <form  action="/process-signup" method="POST">
         <div class="top-row">
           <div class="field-wrap">
@@ -22,11 +23,15 @@
           <input type="password" name="password" placeholder="Set Password*"/>
         </div>
         <button type="submit" class="button button-block">Create Your Account</button>
+        {{>flash_messages}}
       </form>
     </div>
 
+
     <div id="login">
       <h1>Welcome</h1>
+     
+     
       <form  action="/process-login" method="POST">
         <div class="field-wrap">
           <input type="email" name="email" placeholder="Email Address*"/>
@@ -35,6 +40,7 @@
           <input type="password" name="password" placeholder="Password*"/>
         </div>
         <button class="button button-block">Log In</button>
+        {{>flash_messages}}
       </form>
     </div>
   </div><!--tab content-->

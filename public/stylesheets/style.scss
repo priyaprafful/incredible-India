@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-image: url(../images/background-1.png);
 }
 
@@ -202,67 +202,9 @@ textarea {
   height: 50%;
 }
 
-// .middle {
-//   transition: .5s ease;
-//   opacity: 0;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   -ms-transform: translate(-50%, -50%);
-//   text-align: center;
-// }
 
-// .his-content:hover img {
-//   opacity: 0.3;
-// }
 
-// .his-content:hover .middle {
-//   opacity: 1;
-// }
 
-// .text {
-//   background-color: #4CAF50;
-//   color: white;
-//   font-size: 16px;
-//   padding: 16px 32px;
-// }
-
-.trek-content {
-  width: 33.33%;
-  margin-top: 50px;
-}
-
-.trek-content img {
-  width: 80%;
-  height: 60%;
-}
-
-.mys-content {
-  width: 33.33%;
-  margin-top: 50px;
-}
-.mys-content img {
-  width: 80%;
-  height: 60%;
-}
-
-.food-content {
-  width: 33.33%;
-  margin-top: 50px;
-}
-.food-content img {
-  width: 80%;
-  height: 70%;
-}
-.fes-content {
-  width: 50%;
-  margin-top: 50px;
-}
-.fes-content img {
-  width: 80%;
-  height: 60%;
-}
 .carousel-inner {
   position: relative;
   width: 50%;
@@ -312,7 +254,7 @@ h3 {
 /* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 30px;
 }
 
 /* Create four equal columns that floats next to each other */
@@ -353,6 +295,7 @@ h3 {
 
 .img-list {
   width: 100%;
+  height: 370px;
 }
 
 .img-center {
@@ -360,41 +303,106 @@ h3 {
   flex-grow: 3;
 }
 //add form css
-.sectionone img {
-  width: 100%;
-  height: 200px;
-}
+// .sectionone img {
+//   width: 100%;
+//   height: 200px;
+// }
 
-.headerimg {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/header-image.jpg");
-  background-size: cover;
-}
+// .headerimg {
+//   width: 100%;
+//   height: 100%;
+//   background-image: url("../images/header-image.jpg");
+//   background-size: cover;
+// }
 
 .sectiontwo {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-.grid-images {
-  width: 35%;
-  height: 500px;
-  border: 2px solid black;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+.single-image {
+  width: 60%;
+  height: 700px;
+  //border: 2px solid black;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-around;
+  // align-items: center;
 }
-
+.single-image img {
+  width: 82%;
+  height: 82%;
+  margin-left: 33px
+}
 .formpart {
   width: 35%;
   height: 500px;
 }
 
-.grid-each-image {
-  width: 35%;
-  height: 35%;
-  background-color: black;
+.addblog-form {
+  width: 609px;
+  margin: 5px auto;
+  background-color: #f3efe7;
+  padding: 2px;
+  height: 574px;
+}
+
+.addblog-form h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.addblog-form input{
+  height: 36px;
+  width: 73%;
+  /* padding-bottom: 27px; */
+  margin-bottom: 18px;
+  margin-left: 91px;
+
+}
+.addblog-form input[type=text], textarea {
+  width: 73%;
+  margin-bottom: 28px;
+  font-size: 20px;
+  color: #cfcece;
+  font-weight: 300;
+  padding: 8px 12px;
+  /* border: none; */
+  color: #555555;
+  font-weight: 300;
+  margin-left: 86px;
+}
+
+
+.addblog-form button{
+  cursor: pointer;
+  margin: 0;
+  padding: 11px 31px;
+  background: #636363;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 86px;
+}
+
+
+//flash messages css
+
+.error-messages{
+  border:3px solid;
+  border-radius:3px;
+  color:white;
+  padding:10px;
+  margin-top: 3px;
+  background-color: #b40701
+}
+
+.success-messages{
+  border-radius:3px;
+  color:white;
+  padding:10px;
+  margin-top: 3px;
+  background-color: green
 }

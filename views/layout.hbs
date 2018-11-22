@@ -36,10 +36,12 @@
         <li><a href="/culture">Culture</a></li>
         <li><a href="/food">Food</a></li>
         <li><a href="/addStory">Add your story</a></li>
-        <li><a href="/planTrip">Plan your trip</a></li>
+       
+       
 
         {{#if currentUser}}
         <b>{{currentUser.email}}</b>
+        <a href="/allStories">All Stories</a>
         <a href="/myStories">Show my stories</a>
         <li><a href="/logout">Log Out</a></li>
         {{else}}

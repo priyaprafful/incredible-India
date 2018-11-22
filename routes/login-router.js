@@ -28,7 +28,7 @@ router.post("/process-signup",(req,res,next)=>{
   const encryptedPassword = bcrypt.hashSync(password,10);
   User.create({firstName,lastName,email,encryptedPassword})
   .then(userDoc=>{
-    req.flash("Congratulations","Signup success");
+    req.flash("success","Signup success");
     res.redirect("/")
   })
   .catch(err =>next(err));
@@ -48,7 +48,7 @@ router.post("/process-login",(req,res,next)=>{
     }
     else{
       req.logIn(userDoc,()=>{
-      req.flash("succes","log in success");
+      req.flash("success","log in success");
       res.redirect("/")
     });
     }
@@ -58,8 +58,13 @@ router.post("/process-login",(req,res,next)=>{
 
 router.get("/logout",(req,res,next)=>{
   req.logOut();
-  req.flash("succes","logged out suceesfully");
+  req.flash("success","logged out suceesfully");
   res.redirect("/")
 });
 
+
+
+
 module.exports = router;
+
+
