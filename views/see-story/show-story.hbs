@@ -1,12 +1,18 @@
 
-<div>Travel stories</div>
-<div>
+<h2>Travel stories</h2>
+<div class="row">
   {{#each arrayOfStories}}
-    <div>
-      <h3>{{this.title}}</h3>
-      <h3>{{this.place}}</h3>
-      <h3>{{this.description}}</h3>
-    <img src={{this.avatar}}>
-    </div>
+    <div class="column">
+ <div class="content">
+    <h3>{{this.title}}</h3>
+    <a class="img-center" href="/see-story/{{this.id}}">
+    <img class="img-list" src={{this.avatar}}>
+     </a>
+     <h3>{{this.place}}</h3>
+     </div>
+     </div>
   {{/each}}
+  
 </div>
+
+

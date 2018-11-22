@@ -18,66 +18,66 @@ mongoose
   });
 
 const cityData = [
-  // {
-  //   placeName: "Goa Beaches",
-  //   cityName: "Goa",
-  //   description:
-  //     " On the western coast of India is Goa, a former colony of Portugal that blends Indian culture with colonial influences and plenty of international tourism. Goa is popular largely because of its spectacular beaches. The busiest and most popular of all is Candolim Beach, where travelers from around the world flock to soak up the sun. Anjuna Beach, by contrast, is far less crowded. It is also an amazing place where you can walk to Chapora Fort and admire the sandy coastline from a new perspective. Palolem is considered one of the most beautiful beaches in all of Goa with it’s natural bay surrounded by lofty headlands on either sides. Goa is widely loved by adventurers, and recreational activities are plentiful for those eager for some fun in the sun.",
-  //   placeCategory: "BestPlaces",
-  //   images: [
-  //     "https://media.cntraveller.in/wp-content/uploads/2017/01/goaresortlead-866x487.jpg",
-  //     "https://imgcld.yatra.com/ytimages/image/upload/t_yt_blog_c_fill_q_auto:good_f_auto_w_800_h_500/v1450246263/Word_Goa_on_beach.jpg",
-  //     "https://www.homevilas.com/Blog/wp-content/uploads/2018/03/goa-beaches-732x458.jpg"
-  //   ]
-  // },
-  // {
-  //   placeName: "Munnar",
-  //   cityName: "Kerala",
-  //   description:
-  //     " Munnar rises as three mountain streams merge  - Mudrapuzha, Nallathanni and Kundala. 1,600 m above sea level, this hill station was once the summer resort of the erstwhile British Government in South India. Sprawling tea plantations, picturesque towns, winding lanes and holiday facilities make this a popular resort town. Among the exotic flora found in the forests and grasslands here is the Neelakurinji. This flower which bathes the hills in blue once in every twelve years, will bloom next in 2018. Munnar also has the highest peak in South India, Anamudi, which towers over 2,695 m. Anamudi is an ideal spot for trekking.",
-  //   placeCategory: "BestPlaces",
-  //   images: [
-  //     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Munnar_hillstation_kerala.jpg/1200px-Munnar_hillstation_kerala.jpg",
-  //     "https://cdn.shopify.com/s/files/1/1753/9043/products/1Munnar_f49fbcc7-a214-4d3a-992a-fabe600a25e8_1024x1024.jpg?v=1485948033",
-  //     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Munnar_hillstation_kerala.jpg/800px-Munnar_hillstation_kerala.jpg"
-  //   ]
-  // },
-  // {
-  //   placeName: "Loktak Lake",
-  //   cityName: "Manipur",
-  //   description:
-  //     " Loktak Lake of Manipur state is the largest freshwater lake in India,located near Moirang and mostly famous for the floating phumdis. This ancient lake also host the only floating national park in the world, Keibul Lamjao which is solo home of the endangered sangai or Manipur brow-antlered deer.",
-  //   placeCategory: "BestPlaces",
-  //   images: [
-  //     "http://www.lostwithpurpose.com/wp-content/uploads/2017/07/DSC07574.jpg",
-  //     "http://www.lostwithpurpose.com/wp-content/uploads/2017/07/DSC07591.jpghttps://1.bp.blogspot.com/-TqehhjQ_grM/Wx5qug6J0KI/AAAAAAAABP0/YEmptLA17ps_ix6QI_rmXCl2aDIT9nncwCLcBGAs/s1600/loktaklake020202020.jpg",
-  //     "https://www.outlookindia.com/outlooktraveller//public/uploads/2017/08/Loktak1_TI.jpg"
-  //   ]
-  // },
-  // {
-  //   placeName: "Lonar Crater Maharashtra",
-  //   cityName: "Lonar Crater Maharashtra",
-  //   description:
-  //     " About 52,000 years ago, a 2 million ton meteor that plummeted towards Earth, is believed to have hit at this spot in Lonar. The hyper-velocity impact created a 150-metre deep and 1.8-km wide bowl-shaped hole or crater. This is now the site where Lonar Lake, an unusually saline water body, is located. The Lonar Lake is Earth's largest and only salt water lake in basaltic rock. It is not just any meteorite crash site, it has triggered many questions that are beyond understanding - like why is the lake both saline and alkaline at the same time? Why doesn't the compass work here? What lies at its bottom?! Scientists across the world believe that the meteorite is still buried deep in the crater.",
-  //   placeCategory: "BestPlaces",
-  //   images: [
-  //     "https://adventures365.in/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/5/_/5.jpg",
-  //     "https://www.gyanbyte.com/sites/default/files/2017-07/xlonar-crater.jpg.pagespeed.ic.rbmcsAFV0g.jpg",
-  //     "http://res.cloudinary.com/himanshujain/image/upload/v1454615745/activity/Lonar_Lake_t9hy1a.jpg"
-  //   ]
-  // },
-  // {
-  //   placeName: "Satluj River",
-  //   cityName: "Rishikesh",
-  //   description:
-  //     " With bursting energy and enthusiasm, twenties is the best time to enjoy thrill and adventure, especially with your friends. Travel to the adventure capital of India, Rishikesh and ride on the mystical but fierce fast flowing waters of Ganges. Rishikesh is a must visit place in India if you haven’t yet crossed the age bar.",
-  //   placeCategory: "BestPlaces",
-  //   images: [
-  //     "https://i.pinimg.com/originals/a0/d7/b9/a0d7b9cf2efdde4ead6aecb7cbc3e490.jpg",
-  //     "https://smedia2.intoday.in/indiatoday/images/stories/2016April/rishikesh,-facebook,-delhi-help_042116010511.jpg",
-  //     "http://www.adhyatmik.org/uploads/2/1/6/5/21654968/s236601367565414356_p23_i1_w1600.jpeg"
-  //   ]
-  // }
+  {
+    placeName: "Goa Beaches",
+    cityName: "Goa",
+    description:
+      " On the western coast of India is Goa, a former colony of Portugal that blends Indian culture with colonial influences and plenty of international tourism. Goa is popular largely because of its spectacular beaches. The busiest and most popular of all is Candolim Beach, where travelers from around the world flock to soak up the sun. Anjuna Beach, by contrast, is far less crowded. It is also an amazing place where you can walk to Chapora Fort and admire the sandy coastline from a new perspective. Palolem is considered one of the most beautiful beaches in all of Goa with it’s natural bay surrounded by lofty headlands on either sides. Goa is widely loved by adventurers, and recreational activities are plentiful for those eager for some fun in the sun.",
+    placeCategory: "BestPlaces",
+    images: [
+      "https://media.cntraveller.in/wp-content/uploads/2017/01/goaresortlead-866x487.jpg",
+      "https://imgcld.yatra.com/ytimages/image/upload/t_yt_blog_c_fill_q_auto:good_f_auto_w_800_h_500/v1450246263/Word_Goa_on_beach.jpg",
+      "https://www.homevilas.com/Blog/wp-content/uploads/2018/03/goa-beaches-732x458.jpg"
+    ]
+  },
+  {
+    placeName: "Munnar",
+    cityName: "Kerala",
+    description:
+      " Munnar rises as three mountain streams merge  - Mudrapuzha, Nallathanni and Kundala. 1,600 m above sea level, this hill station was once the summer resort of the erstwhile British Government in South India. Sprawling tea plantations, picturesque towns, winding lanes and holiday facilities make this a popular resort town. Among the exotic flora found in the forests and grasslands here is the Neelakurinji. This flower which bathes the hills in blue once in every twelve years, will bloom next in 2018. Munnar also has the highest peak in South India, Anamudi, which towers over 2,695 m. Anamudi is an ideal spot for trekking.",
+    placeCategory: "BestPlaces",
+    images: [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Munnar_hillstation_kerala.jpg/1200px-Munnar_hillstation_kerala.jpg",
+      "https://cdn.shopify.com/s/files/1/1753/9043/products/1Munnar_f49fbcc7-a214-4d3a-992a-fabe600a25e8_1024x1024.jpg?v=1485948033",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Munnar_hillstation_kerala.jpg/800px-Munnar_hillstation_kerala.jpg"
+    ]
+  },
+  {
+    placeName: "Loktak Lake",
+    cityName: "Manipur",
+    description:
+      " Loktak Lake of Manipur state is the largest freshwater lake in India,located near Moirang and mostly famous for the floating phumdis. This ancient lake also host the only floating national park in the world, Keibul Lamjao which is solo home of the endangered sangai or Manipur brow-antlered deer.",
+    placeCategory: "BestPlaces",
+    images: [
+      "http://www.lostwithpurpose.com/wp-content/uploads/2017/07/DSC07574.jpg",
+      "http://www.lostwithpurpose.com/wp-content/uploads/2017/07/DSC07591.jpghttps://1.bp.blogspot.com/-TqehhjQ_grM/Wx5qug6J0KI/AAAAAAAABP0/YEmptLA17ps_ix6QI_rmXCl2aDIT9nncwCLcBGAs/s1600/loktaklake020202020.jpg",
+      "https://www.outlookindia.com/outlooktraveller//public/uploads/2017/08/Loktak1_TI.jpg"
+    ]
+  },
+  {
+    placeName: "Lonar Crater Maharashtra",
+    cityName: "Lonar Crater Maharashtra",
+    description:
+      " About 52,000 years ago, a 2 million ton meteor that plummeted towards Earth, is believed to have hit at this spot in Lonar. The hyper-velocity impact created a 150-metre deep and 1.8-km wide bowl-shaped hole or crater. This is now the site where Lonar Lake, an unusually saline water body, is located. The Lonar Lake is Earth's largest and only salt water lake in basaltic rock. It is not just any meteorite crash site, it has triggered many questions that are beyond understanding - like why is the lake both saline and alkaline at the same time? Why doesn't the compass work here? What lies at its bottom?! Scientists across the world believe that the meteorite is still buried deep in the crater.",
+    placeCategory: "BestPlaces",
+    images: [
+      "https://adventures365.in/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/5/_/5.jpg",
+      "https://www.gyanbyte.com/sites/default/files/2017-07/xlonar-crater.jpg.pagespeed.ic.rbmcsAFV0g.jpg",
+      "http://res.cloudinary.com/himanshujain/image/upload/v1454615745/activity/Lonar_Lake_t9hy1a.jpg"
+    ]
+  },
+  {
+    placeName: "Satluj River",
+    cityName: "Rishikesh",
+    description:
+      " With bursting energy and enthusiasm, twenties is the best time to enjoy thrill and adventure, especially with your friends. Travel to the adventure capital of India, Rishikesh and ride on the mystical but fierce fast flowing waters of Ganges. Rishikesh is a must visit place in India if you haven’t yet crossed the age bar.",
+    placeCategory: "BestPlaces",
+    images: [
+      "https://i.pinimg.com/originals/a0/d7/b9/a0d7b9cf2efdde4ead6aecb7cbc3e490.jpg",
+      "https://smedia2.intoday.in/indiatoday/images/stories/2016April/rishikesh,-facebook,-delhi-help_042116010511.jpg",
+      "http://www.adhyatmik.org/uploads/2/1/6/5/21654968/s236601367565414356_p23_i1_w1600.jpeg"
+    ]
+  },
   // {
   //   placeName: "The Place of Suicidal Birds",
   //   cityName: "Jatinga,Asam",

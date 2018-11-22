@@ -18,6 +18,16 @@ router.get("/see-story/stories", (req, res, next) => {
   .catch(err => next(err));
 });
 
+router.get("/allStories",(req,res,next)=>{
+  Story.find().then(storiesResult => {
+    //res.send(mysteriousresults)
+    res.locals.arrayOfStories = storiesResult;
+    res.render("see-story/show-story.hbs");
+  })
+  .catch(err => next(err));
+});
+
+
 //this is for story detail
 router.get("/see-story/:storyId", (req, res, next) => {
   if(req.user == undefined){
@@ -32,20 +42,28 @@ router.get("/see-story/:storyId", (req, res, next) => {
   .catch(err => next(err));
 });
 
-router.post("/process-story", fileUploader.single("avatarUpload"), (req, res, next) => {
+router.post("/process-story", 
+fileUploader.single("avatarUpload"), 
+(req, res, next) => {
   console.log("-------------------------------hello");
   console.log("req file ", req.file);
+
+
   const { user,title,description,place } = req.body;
-  console.log("hello");
+
   let toUpdate = { user,title, description,place};
   //multer stores the file in req.file
   console.log("req file ", req.file);
+ 
   if (req.file) {
     console.log("req file secure url ", req.file.secure_url);
     toUpdate = {  user,title, description,place, avatar: req.file.secure_url };
   }
+
+
+
   Story.create(toUpdate).then(storyDoc=>{
-    res.redirect("see-story/stories")
+    res.redirect("/see-story/stories")
   })
   .catch(err =>next(err));
 });
