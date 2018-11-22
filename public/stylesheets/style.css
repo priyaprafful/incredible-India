@@ -7,30 +7,18 @@ body {
 a {
   color: #00b7ff; }
 
-header {
-  height: 50px; }
-
-nav {
-  position: fixed;
-  background-color: black;
-  top: 0;
-  width: 100%;
-  z-index: 99992;
-  padding: 10px 0;
-  border-bottom: 2px solid #b40701; }
-
 .menu-list {
   display: flex; }
 
 .form a {
   text-decoration: none;
   color: blue;
-  transition: .5s ease; }
+  transition: 0.5s ease; }
   .form a:hover {
     color: darkblue; }
 
 .form {
-  background: #00B7FF;
+  background: #00b7ff;
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
@@ -55,12 +43,12 @@ nav {
     float: left;
     width: 50%;
     cursor: pointer;
-    transition: .5s ease; }
+    transition: 0.5s ease; }
     .tab-group .form li a:hover {
       background: darkblue;
       color: white; }
   .tab-group .form.active a {
-    background: #00B7FF;
+    background: #00b7ff;
     color: white; }
 
 .form .tab-content > div:last-child {
@@ -83,7 +71,8 @@ nav {
 label.highlight {
   color: white; }
 
-.form input, textarea {
+.form input,
+textarea {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -94,8 +83,9 @@ label.highlight {
   border: 1px solid grey;
   color: white;
   border-radius: 0;
-  transition: border-color .25s ease, box-shadow .25s ease; }
-  .form input:focus, textarea:focus {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease; }
+  .form input:focus,
+  textarea:focus {
     outline: 0;
     border-color: darkblue; }
 
@@ -126,7 +116,7 @@ textarea {
   font-size: 2rem;
   font-weight: 20px;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   background: blue;
   color: white;
   transition: all 0.5s ease;
@@ -169,38 +159,6 @@ textarea {
   width: 80%;
   height: 50%; }
 
-.trek-content {
-  width: 33.33%;
-  margin-top: 50px; }
-
-.trek-content img {
-  width: 80%;
-  height: 60%; }
-
-.mys-content {
-  width: 33.33%;
-  margin-top: 50px; }
-
-.mys-content img {
-  width: 80%;
-  height: 60%; }
-
-.food-content {
-  width: 33.33%;
-  margin-top: 50px; }
-
-.food-content img {
-  width: 80%;
-  height: 70%; }
-
-.fes-content {
-  width: 50%;
-  margin-top: 50px; }
-
-.fes-content img {
-  width: 80%;
-  height: 60%; }
-
 .carousel-inner {
   position: relative;
   width: 50%;
@@ -214,14 +172,8 @@ textarea {
 .carousel-control-next {
   right: 20%; }
 
-<<<<<<< HEAD
 * {
   box-sizing: border-box; }
-
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial; }
 
 /* Center website */
 .main {
@@ -229,7 +181,7 @@ body {
   margin: auto; }
 
 h3 {
-  font-size: 50px;
+  font-size: 40px;
   word-break: break-all;
   line-height: 60px;
   flex-grow: 1;
@@ -241,7 +193,7 @@ h3 {
 /* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
-  padding: 8px; }
+  padding: 30px; }
 
 /* Create four equal columns that floats next to each other */
 .column {
@@ -273,12 +225,13 @@ h3 {
     width: 100%; } }
 
 .img-list {
-  width: 100%; }
+  width: 100%;
+  height: 370px; }
 
 .img-center {
   display: block;
   flex-grow: 3; }
-=======
+
 .sectionone {
   width: 100%;
   height: 200px; }
@@ -311,6 +264,154 @@ h3 {
   width: 35%;
   height: 35%;
   background-color: black; }
->>>>>>> ff3bec5838c25e6b87188ed5b41eb6d1ae50626e
+
+.img-logo {
+  display: block;
+  margin: auto;
+  height: 50px;
+  width: auto; }
+
+.menu-list {
+  background-color: #f8eeab;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.menu-list a {
+  justify-content: space-around; }
+
+.menu-list-r {
+  display: flex;
+  flex-direction: row; }
+
+.menu-list a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 3%; }
+
+.menu-list .icon {
+  display: none;
+  color: black; }
+
+@media screen and (max-width: 1100px) {
+  .menu-list a {
+    display: none; }
+  .menu-list a.icon {
+    display: flex;
+    justify-content: flex-start; } }
+
+@media screen and (max-width: 1100px) {
+  nav {
+    display: inline; }
+  .menu-list.responsive {
+    display: flex;
+    flex-direction: column; }
+  .menu-list.responsive .icon {
+    display: flex;
+    right: 0;
+    top: 0; }
+  .menu-list.responsive a {
+    float: none;
+    display: block;
+    text-align: left; } }
+
+/* Styles the thumbnail */
+a.lightbox img {
+  height: 220px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin: 94px 20px 20px 20px; }
+
+.lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  overflow: hidden; }
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+
+/* Styles the close link, adds the slide down transition */
+a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+/* Provides part of the "X" to eliminate an image from the close link */
+a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0; }
+
+.lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%; }
+
+.lightbox-target:target a.lightbox-close {
+  top: 0px; }
 
 /*# sourceMappingURL=style.css.map */

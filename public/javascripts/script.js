@@ -47,3 +47,12 @@ $(".signup").on("click", function(e) {
   $(".signup").css("background-color", "black");
   $(".signuplink").css("color", "white");
 });
+
+function responsiveNav() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "menu-list") {
+    x.className += " responsive";
+  } else {
+    x.className = "menu-list";
+  }
+}

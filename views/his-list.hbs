@@ -1,12 +1,13 @@
 <h2>historical places</h2>
 
 
-<div class="his-pattern">
+<div class="row">
   {{#each hisArray}}
-  <div class="his-content">
- <a href="/historicalplaces/{{this.id}}"><img src={{this.images.[0]}} alt="historical-image"></a>
- <h3>{{this.placeName}}</h3>
+  <div class="column">
+    <div class="content">
+      <a class="img-center" href="/historicalplaces/{{this.id}}"><img class="img-list" src={{this.images.[0]}} alt="historical-image"></a>
+      <h3>{{this.placeName}}</h3>
+    </div>
+  </div>
+  {{/each}}
 </div>
- {{/each}}
-</div>
-

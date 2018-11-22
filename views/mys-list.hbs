@@ -1,16 +1,13 @@
 <h2>Mysterious Places</h2>
 
-<div class="his-pattern">
+<div class="row">
   {{#each mysArray}}
-  <div class="mys-content">
-     <a href="/mysteriousplaces/{{this.id}}"><img src={{this.images.[0]}} alt="mysterious-image"></a>
+  <div class="column">
+    <div class="content">
+      <a class="img-center" href="/mysteriousplaces/{{this.id}}"><img class="img-list" src={{this.images.[0]}} alt="mysterious-image"></a>
 
-    <h3>{{this.placeName}}</h3>
-  
-  
-   
+      <h3>{{this.placeName}}</h3>
+    </div>
   </div>
   {{/each}}
 </div>
-
-
