@@ -252,6 +252,7 @@ h3 {
 .row,
 .row > .column {
   padding: 30px;
+  min-height: 330px;
 }
 
 /* Create four equal columns that floats next to each other */
@@ -328,7 +329,7 @@ h3 {
   // align-items: center;
 }
 .single-image img {
-  width: 890px;
+  width: 600px;
   height: 82%;
   margin-left: 33px;
 }
