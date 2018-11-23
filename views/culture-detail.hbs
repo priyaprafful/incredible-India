@@ -1,10 +1,15 @@
-<h2>Culture detail</h2>
-
 <h2>{{myculture.festivalName}}</h2>
-<p>{{myculture.description}}</p>
-{{#each myculture.images}}
-<a class="lightbox" href="#dog"><img src="{{this}}"></a>
-{{/each}}
+<div class="detail-img">
+    {{#each myculture.images}}
+    <a class="lightbox" href="#dog"><img src="{{this}}"></a>
+    <div class="lightbox-target" id="dog"><img src="{{this}}">
+        <a class="lightbox-close" href="#"></a></div>
+    {{/each}}
+</div>
+<div class="descriptionbg">
+
+    <p>{{myculture.description}}</p>
+</div>
 
 <section class="places-reviews">
     <form action="/culture/{{myculture._id}}/process-review" method="POST">
@@ -14,7 +19,7 @@
         </label>
 
         <label for="">
-            Commments:
+            Comments:
             <input type="text" name="comments" placeholder="My favorite places!">
         </label>
 

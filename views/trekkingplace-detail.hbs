@@ -1,12 +1,15 @@
-<h2>Trekking Place</h2>
-
-
 <h2>{{mytrekkingPlace.placeName}}</h2>
-<p>{{mytrekkingPlace.description}}</p>
-{{#each mytrekkingPlace.images}}
-<a class="lightbox" href="#dog"><img src="{{this}}"></a>
-{{/each}}
+<div class="detail-img">
 
+    {{#each mytrekkingPlace.images}}
+    <a class="lightbox" href="#dog"><img src="{{this}}"></a>
+    <div class="lightbox-target" id="dog"><img src="{{this}}">
+        <a class="lightbox-close" href="#"></a></div>
+    {{/each}}
+</div>
+<div class="descriptionbg">
+    <p>{{mytrekkingPlace.description}}</p>
+</div>
 <section class="places-reviews">
     <form action="/trekkingplaces/{{mytrekkingPlace._id}}/process-review" method="POST">
         <label for="">
@@ -15,7 +18,7 @@
         </label>
 
         <label for="">
-            Commments:
+            Comments:
             <input type="text" name="comments" placeholder="My favorite places!">
         </label>
 

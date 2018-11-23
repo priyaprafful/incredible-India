@@ -1,8 +1,15 @@
 <h2>{{mymysteriousplaces.placeName}}</h2>
-<p>{{mymysteriousplaces.description}}</p>
-{{#each mymysteriousplaces.images}}
-<a class="lightbox" href="#dog"><img src="{{this}}"></a>
-{{/each}}
+<div class="detail-img">
+
+    {{#each mymysteriousplaces.images}}
+    <a class="lightbox" href="#dog"><img src="{{this}}"></a>
+    <div class="lightbox-target" id="dog"><img src="{{this}}">
+        <a class="lightbox-close" href="#"></a></div>
+    {{/each}}
+</div>
+<div class="descriptionbg">
+    <p>{{mymysteriousplaces.description}}</p>
+</div>
 
 <section class="places-reviews">
     <form action="/mysteriousplaces/{{mymysteriousplaces._id}}/process-review" method="POST">
@@ -12,7 +19,7 @@
         </label>
 
         <label for="">
-            Commments:
+            Comments:
             <input type="text" name="comments" placeholder="My favorite places!">
         </label>
 

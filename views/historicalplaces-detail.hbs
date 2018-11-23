@@ -1,10 +1,17 @@
-<h2>Historical Detail</h2>
-
 <h2>{{myhistoricalplaces.placeName}}</h2>
-<p>{{myhistoricalplaces.description}}</p>
-{{#each myhistoricalplaces.images}}
-<a class="lightbox" href="#dog"><img src="{{this}}"></a>
-{{/each}}
+
+<div class="detail-img">
+
+    {{#each myhistoricalplaces.images}}
+    <a class="lightbox" href="#dog"><img src="{{this}}"></a>
+    <div class="lightbox-target" id="dog"><img src="{{this}}">
+        <a class="lightbox-close" href="#"></a></div>
+    {{/each}}
+</div>
+<div class="descriptionbg">
+
+    <p>{{myhistoricalplaces.description}}</p>
+</div>
 
 <section class="places-reviews">
     <form action="/historicalplaces/{{myhistoricalplaces._id}}/process-review" method="POST">
@@ -14,7 +21,7 @@
         </label>
 
         <label for="">
-            Commments:
+            Comments:
             <input type="text" name="comments" placeholder="My favorite places!">
         </label>
 

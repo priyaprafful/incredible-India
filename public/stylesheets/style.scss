@@ -14,6 +14,7 @@ a {
   display: flex;
 }
 // login-formcss
+//------------------------------------
 
 .form a {
   text-decoration: none;
@@ -202,6 +203,7 @@ textarea {
   right: 20%;
 }
 
+// DETAIL PAGE CSS
 // -----------------------------------------------
 
 * {
@@ -219,9 +221,16 @@ textarea {
   max-width: 1000px;
   margin: auto;
 }
+h2 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 6vw;
+  display: flex;
+  justify-content: center;
+}
 
 h3 {
-  font-size: 40px;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 2vw;
   word-break: break-all;
   line-height: 60px;
   flex-grow: 1;
@@ -329,6 +338,7 @@ h3 {
   height: 574px;
 }
 
+//NAVBAR CSS
 //------------------------------------
 // header {
 //   text-align: center;
@@ -342,7 +352,7 @@ h3 {
 .img-logo {
   display: block;
   margin: auto;
-  height: 50px;
+  height: 185px;
   width: auto;
 }
 // @media (max-width: 1100px) {
@@ -371,6 +381,10 @@ h3 {
   padding: 14px 16px;
   text-decoration: none;
   height: 3%;
+}
+
+.menu-list a:focus {
+  background-color: grey;
 }
 
 .menu-list .icon {
@@ -422,10 +436,10 @@ h3 {
 /* Styles the thumbnail */
 
 a.lightbox img {
-  height: 220px;
+  height: 267px;
   border: 3px solid white;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  margin: 94px 20px 20px 20px;
+  border-radius: 13%;
 }
 
 // /* Styles the lightbox, removes it from sight and adds the fade-in transition */
@@ -588,4 +602,31 @@ textarea {
   padding: 10px;
   margin-top: 3px;
   background-color: green;
+}
+
+.descriptionbg {
+  background-color: #edd98b;
+}
+
+.descriptionbg p {
+  text-align: center;
+  margin: 0% 10%;
+  padding: 8%;
+}
+
+h2 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.detail-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.places-reviews {
+  padding: 2%;
 }

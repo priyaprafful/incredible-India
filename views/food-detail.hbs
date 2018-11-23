@@ -1,10 +1,16 @@
-<h2>Food detail</h2>
-
 <h2>{{myFoods.foodName}}</h2>
-<p>{{myFoods.description}}</p>
-{{#each myFoods.images}}
-<a class="lightbox" href="#dog"><img src="{{this}}"></a>
-{{/each}}
+<div class="detail-img">
+
+    {{#each myFoods.images}}
+    <a class="lightbox" href="#dog"><img src="{{this}}"></a>
+    <div class="lightbox-target" id="dog"><img src="{{this}}">
+        <a class="lightbox-close" href="#"></a></div>
+    {{/each}}
+</div>
+<div class="descriptionbg">
+
+    <p>{{myFoods.description}}</p>
+</div>
 
 <section class="places-reviews">
     <form action="/food/{{myFoods._id}}/process-review" method="POST">
@@ -14,7 +20,7 @@
         </label>
 
         <label for="">
-            Commments:
+            Comments:
             <input type="text" name="comments" placeholder="My favorite places!">
         </label>
 
