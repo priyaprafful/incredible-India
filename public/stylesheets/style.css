@@ -2,16 +2,12 @@
 body {
   padding: 0px;
   margin: 0px;
-<<<<<<< HEAD
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-image: url(../images/background-1.png); }
-=======
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-image: url(../images/batthern.png); }
 
-body, html {
+body,
+html {
   height: 100%; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 a {
   color: #00b7ff; }
@@ -28,13 +24,9 @@ a {
   padding: 40px;
   max-width: 500px;
   margin: 10px auto;
-<<<<<<< HEAD
-  border-radius: 2px; }
-=======
   border-radius: 2px;
   margin-bottom: 5%;
   margin-top: 5%; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 .tab-group {
   list-style: none;
@@ -153,11 +145,7 @@ textarea {
   width: 50%;
   overflow: hidden;
   left: 25%;
-<<<<<<< HEAD
-  margin-top: 5%; }
-=======
   margin-top: 0.2%; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 .carousel-control-prev {
   left: 20%; }
@@ -172,15 +160,12 @@ textarea {
 .main {
   max-width: 1000px;
   margin: auto; }
-<<<<<<< HEAD
 
 h2 {
   font-family: "Black Han Sans", sans-serif;
   font-size: 6vw;
   display: flex;
   justify-content: center; }
-=======
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 h3 {
   font-family: "Black Han Sans", sans-serif;
@@ -237,19 +222,11 @@ h3 {
 
 .sectiontwo {
   display: flex;
-<<<<<<< HEAD
-  justify-content: space-around;
-  margin-top: 20px; }
-
-.single-image {
-  width: 60%;
-=======
   justify-content: center;
   margin-top: 20px; }
 
 .single-image {
   width: 57%;
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
   height: 700px; }
 
 .single-image img {
@@ -263,42 +240,24 @@ h3 {
 
 .addblog-form {
   width: 609px;
-<<<<<<< HEAD
-  margin: 5px auto;
-  background-color: #f3efe7;
-  padding: 2px;
-  height: 574px; }
-=======
   margin: 5px 0;
   background-color: #edd98b;
   padding: 2px;
   height: 574px;
   margin-right: 2.5%; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 .img-logo {
   display: block;
   margin: auto;
-<<<<<<< HEAD
-  height: 185px;
-=======
   height: 80px;
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
   width: auto; }
 
 .menu-list {
   background-color: rgba(19, 35, 47, 0.9);
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
-  justify-content: space-around; }
-
-.menu-list a {
-  justify-content: space-around; }
-=======
   justify-content: space-around;
   height: 40px; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 .menu-list-r {
   display: flex;
@@ -308,22 +267,19 @@ h3 {
   color: white;
   padding: 10px 10px;
   text-decoration: none;
-<<<<<<< HEAD
-  height: 3%; }
-
-.menu-list a:focus {
-  background-color: grey; }
-=======
   height: 3%;
-  font-family: 'Alegreya', serif; }
+  font-family: "Alegreya", serif; }
 
-.menu-list b, p {
+.menu-list b,
+p {
   color: white;
   padding: 10px 0px;
   text-decoration: none;
   height: 3%;
-  font-family: 'Alegreya', serif; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
+  font-family: "Alegreya", serif; }
+
+.menu-list a:focus {
+  background-color: grey; }
 
 .menu-list .icon {
   display: none;
@@ -356,11 +312,7 @@ a.lightbox img {
   height: 267px;
   border: 3px solid white;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
   border-radius: 13%; }
-=======
-  margin: 94px 20px 20px 20px; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 .lightbox-target {
   position: fixed;
@@ -457,16 +409,6 @@ a.lightbox-close:after {
   text-align: center;
   font-size: 30px;
   margin-bottom: 25px; }
-<<<<<<< HEAD
-
-.addblog-form input {
-  height: 36px;
-  width: 73%;
-  /* padding-bottom: 27px; */
-  margin-bottom: 18px;
-  margin-left: 91px; }
-=======
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 .addblog-form input,
 textarea {
@@ -498,48 +440,19 @@ textarea {
   color: white;
   padding: 5px;
   margin-top: 3px;
-<<<<<<< HEAD
-  background-color: #b40701; }
-=======
   background-color: lightcoral; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
 
 .success-messages {
   border-radius: 3px;
   color: white;
   padding: 5px;
   margin-top: 3px;
-<<<<<<< HEAD
-  background-color: green; }
-
-.descriptionbg {
-  background-color: #edd98b; }
-
-.descriptionbg p {
-  text-align: center;
-  margin: 0% 10%;
-  padding: 8%; }
-
-h2 {
-  font-family: "Black Han Sans", sans-serif;
-  font-size: 3vw;
-  display: flex;
-  justify-content: center;
-  margin-top: 2%; }
-
-.detail-img {
-  display: flex;
-  justify-content: space-between; }
-
-.places-reviews {
-  padding: 2%; }
-=======
   background-color: #1ab188; }
 
 .showtitle {
   text-align: center;
   font-size: 20px;
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   font-style: italic;
   margin-left: 28%; }
 
@@ -574,14 +487,14 @@ h2 {
   padding: 2px; }
 
 .blogstory p {
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   font-style: italic;
   font-size: 20px;
   padding: 0px 20px;
   color: black; }
 
 .blogstory h3 {
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   font-style: italic; }
 
 .storysectiontwo img {
@@ -601,10 +514,10 @@ footer {
 .blog-list-page-title h1 {
   text-align: center;
   font-size: 20px;
-  font-family: "Black Han Sans",sans-serif;
+  font-family: "Black Han Sans", sans-serif;
   font-style: italic;
   margin-top: 20px;
-  font-size: 3.0rem;
+  font-size: 3rem;
   text-decoration: underline; }
 
 .footer {
@@ -618,11 +531,11 @@ footer {
 
 .footer p {
   color: white;
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   font-style: italic; }
 
 .show-story h3 {
-  font-family: 'Alegreya', serif; }
+  font-family: "Alegreya", serif; }
 
 .showdetailstory {
   margin-top: 2%;
@@ -655,6 +568,27 @@ footer {
   margin-left: 40%;
   margin-right: 20%;
   margin-top: -5%; }
->>>>>>> 8c70d92ab4ef8a22e376d68fb5c12ab758e0881d
+
+.descriptionbg {
+  background-color: #edd98b; }
+
+.descriptionbg p {
+  text-align: center;
+  margin: 0% 10%;
+  padding: 8%; }
+
+h2 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%; }
+
+.detail-img {
+  display: flex;
+  justify-content: space-between; }
+
+.places-reviews {
+  padding: 2%; }
 
 /*# sourceMappingURL=style.css.map */
