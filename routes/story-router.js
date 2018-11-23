@@ -19,6 +19,11 @@ router.get("/see-story/stories", (req, res, next) => {
 });
 
 router.get("/allStories",(req,res,next)=>{
+  if(req.user == undefined){
+    res.redirect("/login");
+    return;
+  }
+  
   Story.find().then(storiesResult => {
     //res.send(mysteriousresults)
     res.locals.arrayOfStories = storiesResult;
@@ -49,15 +54,15 @@ fileUploader.single("avatarUpload"),
   console.log("req file ", req.file);
 
 
-  const { user,title,description,place } = req.body;
+  const { user,writerName,title,description,place } = req.body;
 
-  let toUpdate = { user,title, description,place};
+  let toUpdate = { user,writerName,title, description,place};
   //multer stores the file in req.file
   console.log("req file ", req.file);
  
   if (req.file) {
     console.log("req file secure url ", req.file.secure_url);
-    toUpdate = {  user,title, description,place, avatar: req.file.secure_url };
+    toUpdate = {  user,writerName,title, description,place, avatar: req.file.secure_url };
   }
 
 

@@ -11,10 +11,11 @@ enctype="multipart/form-data"
 > 
 <h1>Share your journey with us !!</h1>
 <input type="email" name="user" readonly="readonly" value={{currentUser.email}}>
- <input type="text" name="title" placeholder="title of your story">
- <input type="text" name="place" placeholder="place">
-  <input type="file" name="avatarUpload"> 
- <textarea rows="4" cols="50" name="description" >
+<input type="text" name="writerName" placeholder="Your Name on Story" required>
+ <input type="text" name="title" placeholder="Title of your story" required>
+ <input type="text" name="place" placeholder="Place" required>
+  <input type="file" name="avatarUpload" required> 
+ <textarea rows="4" cols="50" maxlength="1000" name="description" required>
   Share your story with...</textarea> 
   <button>Submit</button>
   </form>
