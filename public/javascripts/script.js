@@ -6,7 +6,16 @@ document.addEventListener(
   false
 );
 
-console.log("hi");
+setTimeout(function(){
+  $(".success-messages").hide();
+},3000);
+
+
+setTimeout(function(){
+  $(".error-messages").hide();
+},3000);
+
+
 
 // $('.tab a').on('click', function (e) {
 

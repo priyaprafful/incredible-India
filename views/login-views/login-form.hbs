@@ -1,3 +1,5 @@
+
+
 <div class="form">
   <ul class="tab-group">
     <li class="tab active signup"><a class="signuplink" href="#signup">Sign Up</a></li>
@@ -5,25 +7,27 @@
   </ul>
   <div class="tab-content">
     <div id="signup">
+       {{>flash_messages}}
       <h1>Register your account</h1>
+     
     
       <form  action="/process-signup" method="POST">
         <div class="top-row">
           <div class="field-wrap">
-            <input type="text" name="firstName" placeholder="First Name*"/>
+            <input type="text" name="firstName" placeholder="First Name*" required/>
           </div>
           <div class="field-wrap">
-            <input type="text" name="lastName" placeholder="Last Name*"/>
+            <input type="text" name="lastName" placeholder="Last Name*" required/>
           </div>
         </div>
         <div class="field-wrap">
-          <input type="email" name="email" placeholder="Email Address*"/>
+          <input type="email" name="email" placeholder="Email Address*(abc@abc.com)" required/>
         </div>
         <div class="field-wrap">
-          <input type="password" name="password" placeholder="Set Password*"/>
+          <input type="password" name="password" placeholder="Set Password*(must conatain atleast a numbers)" required/>
         </div>
         <button type="submit" class="button button-block">Create Your Account</button>
-        {{>flash_messages}}
+        
       </form>
     </div>
 
@@ -34,10 +38,10 @@
      
       <form  action="/process-login" method="POST">
         <div class="field-wrap">
-          <input type="email" name="email" placeholder="Email Address*"/>
+          <input type="email" name="email" placeholder="Email Address*" required/>
         </div>
         <div class="field-wrap">
-          <input type="password" name="password" placeholder="Password*"/>
+          <input type="password" name="password" placeholder="Password*" required/>
         </div>
         <button class="button button-block">Log In</button>
         {{>flash_messages}}

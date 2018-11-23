@@ -3,7 +3,10 @@ const router = express.Router();
 const Story = require("../models/user-story-model.js");
 
 router.get("/myStories", (req, res, next) => {
-  console.log("hello")
+  if(req.user == undefined){
+    res.redirect("/login");
+    return;
+  }
   const userEmail = req.user.email;
   Story.find({ user: { $eq: userEmail } }) .then(storyResults => {
     //res.send(storyResults);

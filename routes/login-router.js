@@ -21,7 +21,7 @@ router.post("/process-signup",(req,res,next)=>{
   //console.log("hello");
   if(!password||password.match(/[0-9]/)===null){
     //console.log("password incorrect");
-    req.flash("error","please enter a password and password must contain a number");
+    req.flash("error","please enter a correct that must contain atleaset one number");
     res.redirect("/login")
   return;
   }
@@ -31,7 +31,10 @@ router.post("/process-signup",(req,res,next)=>{
     req.flash("success","Signup success");
     res.redirect("/")
   })
-  .catch(err =>next(err));
+  .catch(err =>{
+    req.flash("error","The user -"+email+ " already exists, please enter another email address");
+    res.redirect("/login");
+  });
 });
 
 router.post("/process-login",(req,res,next)=>{

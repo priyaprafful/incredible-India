@@ -1,6 +1,7 @@
-<h2>My blogs</h2>
 
-<div>
+<div class="blog-list-page-title"><h1>My Stories</h1></div>
+
+{{!-- <div>
   {{#each storyArray}}
   <div>
     <h3>{{this.title}}</h3>
@@ -11,4 +12,19 @@
 
   </div>
   {{/each}}
+</div> --}}
+
+<div class="row show-story">
+  {{#each storyArray}}
+    <div class="column">
+ <div class="content">
+    
+    <a class="img-center" href="/see-story/{{this.id}}">
+    <img class="img-list" src={{this.avatar}}>
+     </a>
+      <h3>{{this.place}}</h3>
+     </div>
+     </div>
+  {{/each}}
+  
 </div>

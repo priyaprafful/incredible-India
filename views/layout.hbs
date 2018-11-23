@@ -19,12 +19,12 @@
 
 <body>
 
-  <<<<<<< HEAD <nav>
-
+    <nav>
+<div class="logobg">
     <a href="/"><img class="img-logo" src="../images/logo.png" alt=""></a>
-
+</div>
     <div class="menu-list" id="myTopnav">
-
+      <a href="/">Home</a>
       <a href="/historicalplaces">Historical places</a>
       <a href="/mysteriousplaces">Mysterious Places</a>
       <a href="/trekkingplaces">Trekking Places</a>
@@ -35,7 +35,7 @@
 
 
       {{#if currentUser}}
-      <b>{{currentUser.email}}</b>
+      <p>Hello</p> <b>{{currentUser.firstName}}</b>
       <a href="/allStories">All Stories</a>
       <a href="/myStories">Show my stories</a>
       <a href="/logout">Log Out</a>
@@ -49,9 +49,9 @@
     </nav>
 
     {{{body}}}
-    <footer>
+    <div class="footer">
       <p>Made by Priyanka and Harnit</p>
-    </footer>
+    </div>
     <script src="/javascripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
