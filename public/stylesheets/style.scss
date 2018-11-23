@@ -405,9 +405,9 @@ p {
   font-family: "Alegreya", serif;
 }
 
-.menu-list a:focus {
-  background-color: grey;
-}
+// .menu-list a:focus {
+//   background-color: grey;
+// }
 
 .menu-list .icon {
   display: none;
@@ -703,7 +703,6 @@ footer {
   font-style: italic;
   margin-top: 20px;
   font-size: 3rem;
-  text-decoration: underline;
 }
 
 .footer {
@@ -721,9 +720,9 @@ footer {
   font-family: "Alegreya", serif;
   font-style: italic;
 }
-.show-story h3 {
-  font-family: "Alegreya", serif;
-}
+// .show-story h3 {
+//   font-family: "Alegreya", serif;
+// }
 .showdetailstory {
   margin-top: 2%;
   margin-bottom: 1%;
@@ -776,6 +775,8 @@ footer {
   text-align: center;
   margin: 0% 10%;
   padding: 8%;
+  color: black;
+  font-size: x-large;
 }
 
 h2 {
